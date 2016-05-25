@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple selector</title>
+</head>
+<body>
+<div class="wrapper">
+    <ul class="list">
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+        <li class="item">5</li>
+    </ul>
+</div>
+<script>
+    function $$(selector,context){
+        context = context || document;
+        var elements = context.querySelectorAll(selector);
+        console.log(elements);
+        return Array.prototype.slice.call(elements);
+    }
+
+    for(let item of $$('.item')){
+        console.log(item);
+        item.style.fontSize = '36px'
+    }
+
+</script>
+</body>
+</html>

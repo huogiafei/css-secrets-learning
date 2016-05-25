@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>middle Color</title>
+    <style>
+        body{
+            margin:0;
+            height: 100vh;
+        }
+        section{
+            height: 50vh;
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 50vh;
+            color: #ddd;
+        }
+        .s1{
+            /*background-image: linear-gradient(90deg,#09e,#0c9);*/
+            background-image: linear-gradient(90deg,rgb(0,153,238),rgb(0,204,153));
+        }
+        .s2{
+            /*background-color: #09d;*//*(9e+c9)/2 ? */
+            background-color: rgb(0,178,195);
+        }
+        .test{
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+<section class="s1">gradient</section>
+<section class="s2">fallback</section>
+</body>
+</html>
