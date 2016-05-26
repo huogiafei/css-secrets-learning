@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurrentColor</title>
+    <link rel="stylesheet" href="css/ls2.css">
+</head>
+<body>
+<div class="wrap">
+    <h1>CurrentColor</h1>
+    <hr/>
+    <p>this is current color demo</p>
+    <p><input type="text"></p>
+    <p>
+        <textarea>Hello world!</textarea>
+    </p>
+    <p>
+        <button id="changeColor">Change Color</button>
+    </p>
+</div>
+</body>
+<script>
+    var color = {
+        colorCode: ['#09e', '#0c9', '#f66', '#fc1'],
+        count: 1
+    }
+    document.getElementById('changeColor').addEventListener('click', function () {
+        var len = color.colorCode.length;
+        document.getElementsByClassName('wrap')[0].style.color =
+                color.colorCode[(color.count++) % len];
+        //console.log((color.count++)%len);
+    });
+</script>
+</html>

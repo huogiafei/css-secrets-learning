@@ -8,6 +8,7 @@
         body{
             margin:0;
             height: 100vh;
+            position: relative;
         }
         section{
             height: 50vh;
@@ -26,8 +27,44 @@
             /*background-color: #09d;*//*(9e+c9)/2 ? */
             background-color: rgb(0,178,195);
         }
-        .test{
-            color: #000;
+        .target{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border:5px solid #ddd;
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+        .target:after{
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.2);
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+        .target:before{
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: rgba(255,255,255,0.3);
+            height:100vw;
+            transform-origin: 50% 50%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            transform: rotate(55deg);
         }
 
     </style>
@@ -35,5 +72,6 @@
 <body>
 <section class="s1">gradient</section>
 <section class="s2">fallback</section>
+<div class="target"></div>
 </body>
 </html>
