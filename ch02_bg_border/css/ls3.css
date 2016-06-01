@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+}
+
+.box {
+    text-align: center;
+    line-height: 400px;
+    font-size: 36px;
+    font-weight: bold;
+    width: 600px;
+    height: 400px;
+    margin: 10px;
+}
+
+.box1 {
+    background: url(http://placehold.it/200x150/0c9?text=lf,bt) no-repeat left bottom,
+    url(http://placehold.it/200x150/09e?text=390,240) no-repeat 390px 240px,
+    url(http://placehold.it/200x150/f66?text=r-30,t-30) no-repeat right 30px top 30px #eee;
+}
+
+.box2 {
+    position: relative;
+    border: 20px solid rgba(51, 51, 51, 0.1);
+    padding: 20px;
+    background: url(http://placehold.it/200x150/f66?text=r,t) no-repeat right top #eee;
+    background-origin: padding-box;
+    outline: 1px dashed #09e;
+    outline-offset: -40px;
+    color: #999;
+    line-height: 320px;
+}
+
+.box2:before {
+    content: 'border';
+    position: absolute;
+    top: -20px;
+    left: -16px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.box2:after {
+    content: 'padding';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.box2 button{
+    position: absolute;
+    background-color: #0c9;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    border:none;
+    width: 70%;
+    height: 50px;
+    left: 50%;
+    bottom: 70px;
+    margin-left: -35%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.box3{
+    background: url(http://placehold.it/200x150/09e?text=calc) no-repeat #eee;
+    background-position: calc(100% - 10px) calc(100% - 10px);
+}

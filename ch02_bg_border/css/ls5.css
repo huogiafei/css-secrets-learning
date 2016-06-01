@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+    color: #333;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+
+}
+
+.box-1 {
+    background: linear-gradient(0deg, #eee 50%, #ccc 50%) repeat;
+    background-size: 100% 40px;
+}
+
+.box-2 {
+    background: linear-gradient(90deg, #eee 50%, #ccc 50%) repeat;
+    background-size: 40px 100%;
+}
+
+.box-3 {
+    background: linear-gradient(45deg, #eee 50%, #ccc 50%) repeat;
+    background-size: 40px 100%;
+    line-height: 168px;
+    overflow: hidden;
+}
+
+.box-3:after {
+    margin-left: -5px;
+    content: '●●●●●';
+    color: #0c9;
+    font-size: 18px;
+    letter-spacing: 1.6em;
+}
+
+.box-4 {
+    background: linear-gradient(45deg, #eee 25%, #ccc 0, #ccc 50%, #eee 0, #eee 75%, #ccc 0) repeat;
+    /*background: linear-gradient(45deg,#eee 25%,#ccc 25%,#ccc 50%,#eee 50%,#eee 75%,#ccc 75%) repeat;*/
+    background-size: 57px 57px;
+}
+
+.box-5 { /*more better syntax*/
+    background: repeating-linear-gradient(-60deg, #eee, #eee 20px, #ccc 0, #ccc 40px);
+}
+
+.box-6 {
+    background: linear-gradient(45deg, #eee 35%, #ccc 0, #ccc 50%, #eee 0, #eee 65%, #ccc 0) repeat;
+    background-size: 57px 57px;
+}
+
+.box-7 {
+    background: linear-gradient(35deg, #eee 25%, #ccc 0, #ccc 50%, #eee 0, #eee 75%, #ccc 0) repeat;
+    background-size: 57px 57px;
+}
+
+.box-8 {
+    background: repeating-linear-gradient(-45deg,
+    hsla(0, 20%, 80%, 0.5), hsla(0, 20%, 80%, 0.5) 20px,
+    transparent 0, transparent 40px) #f66;
+}
+
+.box-9 {
+    background: repeating-linear-gradient(-45deg, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 0%, 0.2) 20px, transparent 0, transparent 40px),
+    repeating-linear-gradient(45deg, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 0%, 0.2) 20px, transparent 0, transparent 40px) #92ddee;
+}
+
+.box-10 {
+    background: repeating-linear-gradient(-60deg, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 0%, 0.2) 20px, transparent 0, transparent 40px),
+    repeating-linear-gradient(60deg, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 0%, 0.2) 20px, transparent 0, transparent 40px) #90eed5;
+}
+
+.box-11 {
+    background: conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red);
+}
+
+.box-12 {
+    background: #84b1a4;
+    background-image: linear-gradient(hsla(0, 100%, 100%, 0.6) 1px, transparent 0),
+    linear-gradient(90deg, hsla(0, 100%, 100%, 0.6) 1px, transparent 0),
+    linear-gradient(0deg, hsla(0, 100%, 100%, 0.6) 2px, transparent 0),
+    linear-gradient(90deg, hsla(0, 100%, 100%, 0.6) 2px, transparent 0);
+    background-size: 20px 20px, 20px 20px,40px 40px,40px 40px;
+
+}
+
+.box-13 {
+    background: radial-gradient(hsla(0,100%,0%,0.2) 30%, transparent 0) center/40px 40px #eeccb9;
+}
+
+.box-14 {
+    background: radial-gradient(hsla(0,100%,0%,0.2) 30%, transparent 0) center/40px 40px,
+    radial-gradient(hsla(0,100%,0%,0.2) 30%, transparent 0) left -20px top -20px /40px 40px,
+radial-gradient(hsla(0,100%,0%,0.2) 30%, transparent 0) left -20px bottom -20px /40px 40px,
+radial-gradient(hsla(0,100%,0%,0.2) 30%, transparent 0) right -20px bottom -20px /40px 40px,
+radial-gradient(hsla(0,100%,0%,0.2) 30%, transparent 0) right -20px top -20px /40px 40px #0c9;
+}
+
+.box-15 {
+    background: radial-gradient(hsla(0,100%,0%,0.6) 30%, transparent 0) center/40px 40px,
+    radial-gradient(hsla(0,100%,0%,0.2) 30%, transparent 0) left -20px top -20px /40px 40px,
+    radial-gradient(hsla(0,100%,0%,0.2) 30%, transparent 0) left -20px bottom -20px /40px 40px,
+    radial-gradient(hsla(0,100%,0%,0.2) 30%, transparent 0) right -20px bottom -20px /40px 40px,
+    radial-gradient(hsla(0,100%,0%,0.2) 30%, transparent 0) right -20px top -20px /40px 40px #ccbaa1;
+}
+
+.bar {
+    width: 90%;
+    height: 30px;
+    background: linear-gradient(45deg, hsla(0, 0%, 0%, 0.2) 25%,
+    transparent 0, transparent 50%,
+    hsla(0, 0%, 0%, 0.2) 0, hsla(0, 0%, 0%, 0.2) 75%, transparent 0) repeat, #ffb2be;
+    background-size: 57px 57px;
+    animation: loading 2s linear infinite;
+    margin-top: 20px;
+}
+
+@keyframes loading {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 57px 0;
+    }
+}
+
+

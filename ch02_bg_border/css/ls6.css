@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+    color: #333;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+
+}
+
+.box-9 {
+    background: repeating-linear-gradient(-45deg, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 0%, 0.2) 20px, transparent 0, transparent 40px),
+    repeating-linear-gradient(45deg, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 0%, 0.2) 20px, transparent 0, transparent 40px) #92ddee;
+}
+
+.box-10 {
+    background: repeating-linear-gradient(-60deg, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 0%, 0.2) 20px, transparent 0, transparent 40px),
+    repeating-linear-gradient(60deg, hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 0%, 0.2) 20px, transparent 0, transparent 40px) #90eed5;
+}
+
+.box-11 {
+    background: conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red);
+}
+
+.box-12 {
+    background: #84b1a4;
+    background-image: linear-gradient(hsla(0, 100%, 100%, 0.6) 1px, transparent 0),
+    linear-gradient(90deg, hsla(0, 100%, 100%, 0.6) 1px, transparent 0),
+    linear-gradient(0deg, hsla(0, 100%, 100%, 0.6) 2px, transparent 0),
+    linear-gradient(90deg, hsla(0, 100%, 100%, 0.6) 2px, transparent 0);
+    background-size: 20px 20px, 20px 20px, 40px 40px, 40px 40px;
+
+}
+
+.box-13 {
+    background: radial-gradient(hsla(0, 100%, 0%, 0.2) 30%, transparent 0) center/40px 40px #eeccb9;
+}
+
+.box-14 {
+    background: radial-gradient(hsla(0, 100%, 0%, 0.2) 30%, transparent 0) center/40px 40px,
+    radial-gradient(hsla(0, 100%, 0%, 0.2) 30%, transparent 0) left -20px top -20px /40px 40px,
+    radial-gradient(hsla(0, 100%, 0%, 0.2) 30%, transparent 0) left -20px bottom -20px /40px 40px,
+    radial-gradient(hsla(0, 100%, 0%, 0.2) 30%, transparent 0) right -20px bottom -20px /40px 40px,
+    radial-gradient(hsla(0, 100%, 0%, 0.2) 30%, transparent 0) right -20px top -20px /40px 40px #0c9;
+}
+
+.box-15 {
+    background: radial-gradient(hsla(0, 100%, 0%, 0.6) 30%, transparent 0) center/40px 40px,
+    radial-gradient(hsla(0, 100%, 0%, 0.2) 30%, transparent 0) left -20px top -20px /40px 40px,
+    radial-gradient(hsla(0, 100%, 0%, 0.2) 30%, transparent 0) left -20px bottom -20px /40px 40px,
+    radial-gradient(hsla(0, 100%, 0%, 0.2) 30%, transparent 0) right -20px bottom -20px /40px 40px,
+    radial-gradient(hsla(0, 100%, 0%, 0.2) 30%, transparent 0) right -20px top -20px /40px 40px #ccbaa1;
+}
+
+.box-16 {
+    background: #eee url('data:image/svg+xml,\
+ <svg xmlns="http://www.w3.org/2000/svg" \
+ width="100" height="100" fill-opacity= ".25" >\ <rect x= "50" width= "50" height= "50" /> \  <rect y= "50" width= "50" height= "50" /> \ </svg> ');
+    background-size: 40px 40px;
+}
+
+

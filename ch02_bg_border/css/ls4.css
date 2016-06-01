@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+    color: #333;
+}
+
+.box {
+    text-align: center;
+    line-height: 400px;
+    font-size: 36px;
+    font-weight: bold;
+    width: 600px;
+    height: 400px;
+    margin: 10px;
+    background-color: #eee;
+    padding:1em;
+    border-radius: 0.8em;
+    box-shadow:0 0 0 .6em #f66;
+    outline:.7em solid #f66;
+}
+
