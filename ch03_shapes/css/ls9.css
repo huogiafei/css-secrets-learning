@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.title {
+    margin: 1.2em auto 0 auto;
+    text-align: center;
+    color: #666;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 150px);
+    padding: 30px;
+    color: #333;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.shape{
+    background-color: #eee;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    font-weight: bold;
+    line-height: 100px;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.shape-1{
+    border-radius: 50%;
+}
+
+.shape-2{
+    width: 150px;
+    border-radius: 75px/50px;
+}
+
+.shape-3{
+    width: 150px;
+    border-radius: 50%;/*  weight*50%,height*50%   */
+}
+
+.shape-4{
+    width: 150px;
+    border-radius: 20%/50%;
+}
+
+.shape-5{
+    padding-top: 30px;
+    line-height: 1.2;
+    border-radius: calc(100% - 10px)/50%;
+}
+
+.shape-6{
+    border-radius: 90px/50%;
+}
+
+.shape-7{
+    line-height: 1;
+    position: relative;
+    border-radius: 50% 0 50% 0;
+}
+.shape-7:before{
+    top: 20px;
+    left: 30px;
+    position: absolute;
+    content: '12';
+    font-weight: bold;
+    letter-spacing: 1.5em;
+}
+.shape-7:after{
+    left: 30px;
+    position: absolute;
+    bottom: 20px;
+    content: '43';
+    letter-spacing: 1.5em;
+}
+
+.shape-8{
+    border-radius: 50% 0 0 50%;
+}
+
+.shape-9{
+    border-radius: 0 50% 0 0;
+}
+
+.shape-10{
+    border-radius: 0 100% 0 0;
+}
