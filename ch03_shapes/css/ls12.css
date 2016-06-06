@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.title {
+    margin: 1.2em auto 0 auto;
+    text-align: center;
+    color: #666;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 150px);
+    padding: 30px;
+    color: #333;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.box {
+    margin: 30px;
+}
+
+.box-desc {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.tag {
+    position: relative;
+    display: block;
+    background-color: #999;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ccc;
+    height: 50px;
+    line-height: 50px;
+    width: 90px;
+}
+
+.tag-1 {
+    width: 70px;
+    border-radius: 10px 0 0 10px;
+    padding-left: 10px;
+}
+
+.tag-1:after {
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 0;
+    right: -25px;
+    border: 25px solid transparent;
+    border-left-color: #999;
+    border-right: none;
+}
+
+.tag-2 {
+    padding-left: 5px;
+}
+
+.tag-2:after {
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    border: 1px solid transparent;
+    border-left-color: #999;
+    border-width: 25px 0 25px 15px;
+}
+
+.tag-3 {
+    border-radius: 10px 0 0 10px;
+    padding-right: 10px;
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.tag-4 {
+    padding-right: 10px;
+    background-color: transparent;
+}
+
+.tag-4:before,
+.tag-4:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    z-index: -1;
+}
+
+.tag-4:before {
+    top: 0;
+    background: linear-gradient(46deg, #999, #999 80%, transparent 0);
+}
+
+.tag-4:after {
+    bottom: 0;
+    background: linear-gradient(134deg, #999, #999 80%, transparent 0);
+}
+
+.tag-5 {
+    border-radius: 10px 0 0 10px;
+    padding-right: 10px;
+    background: linear-gradient(46deg, #999, #999 80%, transparent 0) no-repeat right top/100% 50%,
+    linear-gradient(134deg, #999, #999 80%, transparent 0) no-repeat right bottom/100% 50% transparent;
+}
+
+.tag-6 {
+    width: 60px;
+    transform: translate(32px, 20px) rotate(-90deg);
+    transform-origin: 0 50%;
+    border-radius: 10px 0 0 10px;
+    padding-right: 10px;
+    background: linear-gradient(45deg, #fc1, #fc1 50%, transparent 0) top right/100% 50%,
+    linear-gradient(135deg, #fc1, #fc1 50%, transparent 0) bottom right/100% 50%;
+}
+
+.tag-6:after,
+.tag-6:before {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 100%;
+    background-color: #333;
+}
+
+.tag-6:before {
+    left: 8px;
+}
+
+.tag-6:after {
+    left: 14px;
+}
+
+.tag-7 {
+    width: 70px;
+    transform-origin: 100% 50%;
+    transform: translate(-20px, 20px) rotate(90deg);
+    color: #09e;
+    background: radial-gradient(at 0px 0px, transparent 10px, currentColor 0) no-repeat top left,
+    radial-gradient(at 0px 100%, transparent 10px, currentColor 0) no-repeat bottom left,
+    linear-gradient(-135deg, transparent, transparent 10px, currentColor 0) no-repeat right top,
+    linear-gradient(-45deg, transparent, transparent 10px, currentColor 0) no-repeat right bottom;
+    background-size: 30px 30px, 30px 30px, calc(100% - 32px) calc(50% - 1px), calc(100% - 32px) calc(50% - 1px);
+}
+
+.tag-8 {
+    width:20px;
+    background-color: transparent;
+    border: 15px solid transparent;
+    border-image: 1 url('data:image/svg+xml,\
+ <svg xmlns="http://www.w3.org/2000/svg" width= "3" height= "3" fill= "%2358a" >\ <polygon points= "0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2" />\ </svg> '); }
+
+.tag-9 {
+    width:50px;
+    background-color: transparent;
+    border: 15px solid transparent;
+    border-image: 1 url('data:image/svg+xml,\
+ <svg xmlns="http://www.w3.org/2000/svg" width= "3" height= "3" fill= "%2358a" >\ <polygon points= "0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2" />\ </svg> '); }
