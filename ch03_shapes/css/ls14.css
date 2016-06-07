@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.title {
+    margin: 1.2em auto 0 auto;
+    text-align: center;
+    color: #666;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 150px);
+    padding: 30px;
+    color: #333;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.box {
+    margin: 30px;
+}
+
+.box-desc {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.flower {
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: #fc1;
+    background: linear-gradient(45deg, currentColor, currentColor calc(100% - 10px), transparent 0) no-repeat left,
+    linear-gradient(-45deg, currentColor, currentColor calc(100% - 10px), transparent 0) no-repeat right;
+    background-size: calc(50% - 2px) 100%;
+    transform-origin: 50% 100%;
+    left: 50%;
+    margin-left: -210px;
+    top: 30px;
+}
+
+.flower:after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 16px;
+    bottom: -18px;
+    left: 50%;
+    margin-left: -2px;
+    background-color: currentColor;
+    border-radius: 2px;
+}
+
+.flower:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+    left: 50%;
+    top: 0;
+    margin-left: -4px;
+}
+
+.pie {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(to left, transparent 50%, #fc1 0) #09e;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(0.5turn)
+    }
+}
+
+@keyframes bg {
+    50% {
+        background-color: #09e;
+    }
+}
+
+.pie-1:before,
+.pie-2:before,
+.pie-3:before {
+    content: '';
+    display: block;
+    margin-left: 50%;
+    height: 100%;
+    background-color: #fc1;
+    border-radius: 0 100% 100% 0/50%;
+    transform-origin: left;
+    animation: spin 50s linear infinite,
+    bg 100s step-end infinite;
+    animation-play-state: paused;
+    animation-delay: inherit;
+}
+
+.pie-part {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0 50px 50px 0;
+    width: 50%;
+    height: 100%;
+    transform-origin: 0 50%;
+}
+
+.pie-2 {
+    text-align: center;
+    color: transparent;
+    line-height: 100px;
+}
+
+.pie-3:before {
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-duration: 5s, 10s;
+}
+
+.pie-4,
+.pie-5,
+.pie-6,
+.pie-7,
+.pie-8,
+.pie-9{
+    color: #666;
+    background: linear-gradient(to left, transparent 50%, #666 0) #0c9;
+}
+
+.pie-5:before,
+.pie-6:before,
+.pie-7:before,
+.pie-8:before,
+.pie-9:before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    border-radius:0 100% 100% 0 / 50%;
+    background-color: currentColor;
+    outline:1px dashed #fc1;
+}
+
+.pie-6:before,
+.pie-7:before,
+.pie-8:before,
+.pie-9:before{
+    transform-origin: left;
+    transform:rotate(40deg);
+}
+
+.pie-7:before {
+    margin-left: 50%;
+    height: 100%;
+    border-radius: 0 100% 100% 0 / 50%;
+    background: #0c9;
+    transform-origin: left;
+    transform: rotate(20deg);
+}
+
+@keyframes s5-spin {
+    to{
+        transform: rotate(0.5turn)
+    }
+}
+@keyframes s5-bg { /*50% change color*/
+    50%{
+        background-color: #0c9;
+    }
+}
+.pie-8:before{
+    /*outline: none;*/
+    transform:rotate(0deg);
+    animation: s5-spin 5s linear infinite,
+    s5-bg 10s step-end infinite;
+    animation-play-state: running;
+}
+
+.pie-9:before{
+    transform:rotate(0deg);
+    animation: s5-spin 50s linear infinite,
+    s5-bg 100s step-end infinite;
+    animation-play-state: paused;
+    animation-delay: inherit; /*important*/
+}
+
+.pie-10{
+    background-color: #333;
+    transform-origin: center;
+    transform:rotate(45deg);
+}
+
+.pie-10:before{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 0 100% 100% 0 /50%;
+    transform-origin: left;
+    background-color: #fc1;
+    transform:rotate(90deg);
+}
+
+.pie-10:after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 20px;
+    top: 20px;
+    border-radius: 50%;
+    background-color: currentColor;
+    left: 30px;
+    top: 20px;
+}
+
+
+
+
+
+
