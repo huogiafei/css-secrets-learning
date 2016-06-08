@@ -2,15 +2,18 @@
 CSS Secrets book learning
 ========================
 
-　　其实在2015年就开始在大漠的博客上关注到这本黑科技，而且博客也有陆陆续续的翻译，到了今年知道出了中文版就马上买回来支持一下，谢谢Lea Verou，w3cplus和css魔法哥。以下是我每一章节的一点小小的心得体会。
-------------------------
+####其实在2015年就开始在大漠的博客上关注到这本黑科技，而且博客也有陆陆续续的翻译，到了今年知道出了中文版就马上买回来支持一下，谢谢Lea Verou，w3cplus和css魔法哥。以下是我每一章节的一点小小的心得体会。####
+
 
 **CH00 Introduction 介绍** 
+
 　　这章虽然主要是介绍，但是有两个单词觉得挺好玩的,DRY(don't repeat yourself) and WET(We Enjoy Typing),从刚刚接触css到熟悉css一年的时间里都是觉得css有很多重复性的东西在里面，有点所谓的刀耕火种，尤其是兼容性和动画，直到看到这边书的内容才觉得css有好多隐藏技能，而且未来的css也必定朝DRY的方向发展。
 　　这一章还有一个地方让我觉得非常好玩而且是佩服作者的地方就是这本书用css+html的形式制作，无论从书的设计布局到css代码（这点更加不用怀疑），都非常的赞。前天还上去Dabblet玩了一下，居然css尺寸的地方会出现标尺，真心佩服女神Lea Verou,所以这本书在我心目中的地位是高阶必备(之前的入面有css权威双鱼，进阶有绿色的那边css精粹)。
 　　还有值得一提的是中文版虽然比原版和台版都要便宜，但是内容上和书的设计排版方面还是挺一致的。
 　　
+  
 **CH02 Background & Border**
+
 1. 半透明边框： backgound-clip
 2. 多重边框： outline + border + box-shadow
 3. 灵活的背景定位 ： background-position,backgournd-origin,calc()
@@ -21,6 +24,7 @@ CSS Secrets book learning
 8. 连续的图像边框：通过background + gradient可以组合出多种连续边框，例如信封。
 
 **CH03 Shapes**
+
 9. 自适应椭圆：border-radius的值，特别是加上`/`的值代表什么，初始位置是右上角。
 10. 平行四边形： :before + skew 
 11. 菱形图片： transform(rotate + scale)和clip-path,clip-path功能非常强大，特意介绍一个[工具](http://bennettfeely.com/clippy/)
