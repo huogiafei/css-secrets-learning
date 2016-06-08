@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folded corner effect折角</title>
+    <!--<link rel="stylesheet" href="../css/ls19.css">-->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333;
+            margin: 0;
+        }
+
+        .title {
+            margin: 1.2em auto 0 auto;
+            text-align: center;
+            color: #666;
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .wrap {
+            display: flex;
+            width: 100vw;
+            height: calc(100vh - 150px);
+            padding: 30px;
+            color: #333;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-content: flex-start;
+        }
+        /*password*/
+        .password{
+            margin: auto;
+            position: relative;
+            background-color: #eee;
+            width: 240px;
+            height: 40px;
+            font-size: 24px;
+            color: #333;
+            border:1px solid currentColor;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .password > input{
+            position: absolute;
+            color:transparent;
+            left: 0;
+            top: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background: linear-gradient(90deg,#333,#333 1px,transparent 0) left center/40px 100% ;
+            border:none;
+            outline: none;
+            margin-left: -1px;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        .password .bg{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 1;
+            background: radial-gradient(currentColor,currentColor 8px,transparent 0) left center/40px 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="password">
+        <input id="pwd" type="text" maxlength="6" />
+        <div class="bg" id="bg"></div>
+    </div>
+</div>
+</body>
+<script>
+    document.querySelector('#pwd').addEventListener('click', function (e) {
+        //console.log(this.value.length);
+    })
+
+    document.querySelector('#pwd').addEventListener('keyup', function (e) {
+        var len = this.value.length;
+        document.querySelector('#bg').style.width = 40 * len + 'px';
+    })
+</script>
+</html>

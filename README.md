@@ -34,4 +34,12 @@ CSS Secrets book learning
 5. 梯形：perspective + rotate + scale,使用3D透视制造梯形效果
 6. 简单的饼图：这一节不太简单(我是学渣)，把每一步分解才基本理解，其中最magic的地方就是animation-play-state:paused 和 animation-delay为负数的组合效果。
 
+**CH04 Visual Effects
+
+1. 投影: 扩张半径（第四个参数）为负数 + multiply shadows
+2. 不规则投影：filter:drop-shadow 这里需要注意就是非透明的都会打上投影，例如文案
+3. 染色效果：三种方法：filter(sepia + saturate + hue-rotate),img+mix-blend-mode,bg+background-blend-mode,而且都支持animation
+4. 毛玻璃效果：这个方法好像有个约束的地方就是bg必须在body那一层,原理就是3层组合：bg-image(body,:before),bg-color(main),blur(:before)
+5. 折角效果：
+
 
