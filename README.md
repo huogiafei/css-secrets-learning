@@ -16,20 +16,32 @@ CSS Secrets book learning
   
 **CH02 Background & Border**
 1. 半透明边框： backgound-clip
+
 2. 多重边框： outline + border + box-shadow
+
 3. 灵活的背景定位 ： background-position,backgournd-origin,calc()
+
 4. 边框内圆角： outline + box-shadow
+
 5. 条纹背景：这一节开始让我有点黑科技的感觉，通过background可以有很多种背景组合效果，还有45度的时候的条纹分解。
+
 6. 复杂的背景：这里找了几个典型例子，格子和波点
+
 7. 伪随机背景：这一节真的是脑洞大开的节奏，原来css可以通过质数这个东西生成随机效果，对想到这点的作者我表示五体投地。
+
 8. 连续的图像边框：通过background + gradient可以组合出多种连续边框，例如信封。
 
 **CH03 Shapes**
 9. 自适应椭圆：border-radius的值，特别是加上`/`的值代表什么，初始位置是右上角。
+
 10. 平行四边形： :before + skew 
+
 11. 菱形图片： transform(rotate + scale)和clip-path,clip-path功能非常强大，特意介绍一个[工具](http://bennettfeely.com/clippy/)
+
 12. 切角效果：从这一节开始就有种用bg拼拼拼的节奏，我的理解bg就是一块块的积木，只要发挥你想象，就可以拼出无限种效果
+
 13. 梯形：perspective + rotate + scale,使用3D透视制造梯形效果
+
 14. 简单的饼图：这一节不太简单(我是学渣)，把每一步分解才基本理解，其中最magic的地方就是animation-play-state:paused 和 animation-delay为负数的组合效果。
 
 
