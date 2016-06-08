@@ -15,7 +15,6 @@ CSS Secrets book learning
 　　
   
 **CH02 Background & Border**
-
 1. 半透明边框： backgound-clip
 2. 多重边框： outline + border + box-shadow
 3. 灵活的背景定位 ： background-position,backgournd-origin,calc()
@@ -26,7 +25,6 @@ CSS Secrets book learning
 8. 连续的图像边框：通过background + gradient可以组合出多种连续边框，例如信封。
 
 **CH03 Shapes**
-
 9. 自适应椭圆：border-radius的值，特别是加上`/`的值代表什么，初始位置是右上角。
 10. 平行四边形： :before + skew 
 11. 菱形图片： transform(rotate + scale)和clip-path,clip-path功能非常强大，特意介绍一个[工具](http://bennettfeely.com/clippy/)
