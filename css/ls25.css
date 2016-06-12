@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.title {
+    margin: 1.2em auto 0 auto;
+    text-align: center;
+    color: #666;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 150px);
+    padding: 30px;
+    color: #333;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.box {
+    margin: 10px 30px;
+}
+
+.box-desc {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.card{
+    color: #eee;
+    font-size: 36px;
+    font-weight: bold;
+    font-family:Helvetica, Arial, sans-serif;
+}
+
+.amp{
+    font-family: Baskerville, "Goudy Old Style",
+    Garamond, Palatino, serif;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Ampersand;
+    src: local('Baskerville'),
+    local('Goudy Old Style'),
+    local('Palatino'),
+    local('Book Antiqua');
+    unicode-range: U+26;
+}
+
+@font-face {
+    font-family: myFont;
+    src: local('Baskerville'),
+    local('Goudy Old Style'),
+    local('Palatino'),
+    local('Book Antiqua');
+    unicode-range: U+51;
+}
+
+.card-1{
+    font-family:Ampersand,Helvetica, Arial, sans-serif;
+}
+
+.card-2{
+    font-family:myFont,Helvetica, Arial, sans-serif;
+}
+

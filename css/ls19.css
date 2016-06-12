@@ -106,4 +106,12 @@ body {
     -webkit-filter: drop-shadow(-1px 2px 2px rgba(100,100,100,0.5));
 }
 
+.br{
+    border-radius: 5px;
+}
+
+.br:after{
+    border-radius: 5px;
+}
+
 

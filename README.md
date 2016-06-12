@@ -42,3 +42,12 @@ CSS Secrets book learning
 4. 毛玻璃效果：这个方法好像有个约束的地方就是bg必须在body那一层,原理就是3层组合：bg-image(body,:before),bg-color(main),blur(:before)
 5. 折角效果：这里就要用到高中的学到的几何知识，感觉对于45度的折角来说，代码还是比较dry，但是其他角度的话(通常是30deg,60deg),那就需要用到一些预编译让代码更加DRY，并且写之前要算好尺寸，看到这里，给我的感觉是每一章的最后一小节都是打boss的感觉，爽
 
+**CH05 Typography**
+
+1. 连字符断行: hyphens,不过支持方面只有edge，Firefox和ios支持，如果平时用中文文案为主的话可以不用考虑
+2. 插入换行: 在dt,dl,dd这种情况下使用content:'\A'和white-space:pre(不合并空白)
+3. 斑马纹文本行： 在table下nth-child的确可以实现zebra效果，而一段文本作为一个整体可以用bg:linear-gradient 和 bg-position(一般文本都有padding)实现
+4. 调整tab的宽度：tab-size,在html输出源码的时候使用
+5. 连字：中文来说没多大用处，英文的话也是要配合字体使用
+6. 华丽的&符号：local + unicode-range 可以让指定的字符使用特别的字体
+7. 自定义下划线：实现下划线还是有多种方式：underline,border,box-shadow,bg:linear-gradient,使用text-shadow还可以避开例如g字符的降部，波浪下划线还要自己画图算一下(高中几何的感觉)

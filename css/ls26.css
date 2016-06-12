@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.title {
+    margin: 1.2em auto 0 auto;
+    text-align: center;
+    color: #666;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 150px);
+    padding: 30px;
+    color: #333;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.box {
+    margin: 10px 30px;
+}
+
+.box-desc {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.text {
+    color: #ddd;
+    font-size: 24px;
+}
+
+.text-1 {
+    text-decoration: underline;
+}
+
+.text-2 {
+    border-bottom: 1px solid currentColor;
+}
+
+.text-3 {
+    box-shadow: 0 2px 1px -1px currentColor;
+}
+
+.text-4 {
+    text-decoration-color: yellow;
+    text-decoration-style: dashed;
+    text-decoration-skip: edges;
+}
+
+.text-5 {
+    background: linear-gradient(0deg, #f66 1px, transparent 0) no-repeat top;
+}
+
+.text-6 {
+    background: linear-gradient(90deg, #f66 50%, transparent 0) repeat-x bottom/6px 1px;
+}
+
+.text-7 {
+    background: linear-gradient(0deg, #0c9, #0c9) no-repeat 0 88%/100% 1px;
+    text-shadow: .1em 0 #333, -.1em 0 #333;
+}
+
+.text-8 {
+    background: linear-gradient(45deg,transparent 30% ,#f66 0,#f66 calc(30% + 1px) ,transparent 0) repeat-x  bottom/8px 4px,
+    linear-gradient(135deg,transparent 70% ,#f66 0,#f66 calc(70% + 1px) ,transparent 0) repeat-x bottom/8px 4px;
+}
+
+.demo{
+    border:1px solid #f66;
+    width: 200px;
+    height: 20px;
+    background: linear-gradient(45deg,transparent 33.3% ,#f66 0,#f66 calc(33.3% + 1px) ,transparent 0) repeat  bottom/40px 20px,
+    linear-gradient(135deg,transparent 66.7% ,#f66 0,#f66 calc(66.7% + 1px) ,transparent 0) repeat bottom/40px 20px;
+}
+
+.demo2{
+    border:1px solid #f66;
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(45deg,transparent calc(50% - 1px),#f66 0,#f66 calc(50% + 1px),transparent 0),
+    linear-gradient(90deg,transparent calc(50% - 1px),#f66 0,#f66 calc(50% + 1px),transparent 0),
+    linear-gradient(45deg,transparent calc(33.3% - 1px),#f66 0,#f66 calc(33.3% + 1px),transparent 0),linear-gradient(45deg,transparent calc(50% - 1px),#f66 0,#f66 calc(50% + 1px),transparent 0);
+}
+
+

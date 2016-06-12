@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.title {
+    margin: 1.2em auto 0 auto;
+    text-align: center;
+    color: #666;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 150px);
+    padding: 30px;
+    color: #333;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.box {
+    margin: 10px 30px;
+}
+
+.box-desc {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.box-desc-sec{
+    font-size: 14px;
+}
+
+.card{
+    margin: 0 auto;
+    line-height: 1.8;
+    border:1px solid #ddd;
+    padding: 1em 1.9em;
+    font-size: 16px;
+    color: #ccc;
+}
+
+dd{
+    font-weight: bold;
+    color: #ddd;
+    margin: 0;
+}
+
+.card-1 dt{
+    float: left;
+}
+
+.card-2 dt,
+.card-2 dd{
+    display: inline;
+}
+
+.card-2 dd:after{
+    content:'\A';
+    white-space: pre;
+}
+
+.card-3 dt,
+.card-3 dd{
+    display: inline;
+}
+
+.card-3 dt:nth-child(n+2):before{
+    content:'\A';
+    white-space: pre;
+}
+
+.card-3 dd+dd:before{
+    content: ' , ';
+    font-weight:normal;
+}
