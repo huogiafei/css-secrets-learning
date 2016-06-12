@@ -16,9 +16,9 @@ CSS Secrets book learning
   
 **CH02 Background & Border**
 
-1. 半透明边框： backgound-clip
+1. 半透明边框： background-clip
 2. 多重边框： outline + border + box-shadow
-3. 灵活的背景定位 ： background-position,backgournd-origin,calc()
+3. 灵活的背景定位 ： background-position,background-origin,calc()
 4. 边框内圆角： outline + box-shadow
 5. 条纹背景：这一节开始让我有点黑科技的感觉，通过background可以有很多种背景组合效果，还有45度的时候的条纹分解。
 6. 复杂的背景：这里找了几个典型例子，格子和波点
@@ -34,12 +34,11 @@ CSS Secrets book learning
 5. 梯形：perspective + rotate + scale,使用3D透视制造梯形效果
 6. 简单的饼图：这一节不太简单(我是学渣)，把每一步分解才基本理解，其中最magic的地方就是animation-play-state:paused 和 animation-delay为负数的组合效果。
 
-**CH04 Visual Effects
+**CH04 Visual Effects**
 
 1. 投影: 扩张半径（第四个参数）为负数 + multiply shadows
 2. 不规则投影：filter:drop-shadow 这里需要注意就是非透明的都会打上投影，例如文案
 3. 染色效果：三种方法：filter(sepia + saturate + hue-rotate),img+mix-blend-mode,bg+background-blend-mode,而且都支持animation
 4. 毛玻璃效果：这个方法好像有个约束的地方就是bg必须在body那一层,原理就是3层组合：bg-image(body,:before),bg-color(main),blur(:before)
-5. 折角效果：
-
+5. 折角效果：这里就要用到高中的学到的几何知识，感觉对于45度的折角来说，代码还是比较dry，但是其他角度的话(通常是30deg,60deg),那就需要用到一些预编译让代码更加DRY，并且写之前要算好尺寸，看到这里，给我的感觉是每一章的最后一小节都是打boss的感觉，爽
 

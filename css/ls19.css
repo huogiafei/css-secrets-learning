@@ -38,41 +38,72 @@ body {
     color: #666;
 }
 
-/*password*/
-.password{
-    margin: auto;
+.card {
+    margin: 0 auto;
     position: relative;
-    background-color: #eee;
-    width: 240px;
-    height: 40px;
-    font-size: 24px;
-    color: #333;
-    border:1px solid currentColor;
-    border-radius: 5px;
-    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    background: #aaa;
+    text-align: center;
+    line-height: 120px;
+    color: #ccc;
 }
 
-.password > input{
+.card-1:after {
+    content: '';
     position: absolute;
-    color:transparent;
-    left: 0;
     top: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background: linear-gradient(90deg,currentColor,currentColor 1px,transparent 0) left center/40px 100% ;
-    border:none;
-    outline: none;
-    margin-left: -1px;
+    right: 0;
+    border-width: 22px 0 0 22px;
+    border-style: solid;
+    border-color: #333 hsla(0, 0%, 100%, 0.5);
+    box-shadow: -1px 1px 1px 2px rgba(45, 45, 45, 0.2);
 }
 
-.password .bg{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    z-index: 1;
-    background: radial-gradient(currentColor,currentColor 8px,transparent 0) left center/40px 100%;
+.card-2 {
+    background: #808689;
+    background-image: linear-gradient(-135deg, transparent 50%, hsla(0, 0%, 86%, 0.5) 0),
+    linear-gradient(-135deg, transparent 1em, #aaa 0);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 1.4em 1.4em, 100% 100%;
+    background-position: 100% 0, 0 0;
 }
+
+.card-3{
+    background:linear-gradient(-120deg, transparent 1em, #aaa 0);
+}
+
+.card-3:after {
+    content: '';
+    position: absolute;
+    transform-origin: 0 0;
+    right: -1.14em;
+    top: 0;
+    transform: rotate(60deg);
+    border: 1em solid transparent;
+    border-bottom: none;
+    border-top-color: #ddd;
+    border-width: 1em 1.8em 0 0.5em;
+    -webkit-filter: drop-shadow(0 1px 2px rgba(100,100,100,0.3));
+}
+
+.card-4{
+    background: #aaa;
+    background:linear-gradient(-120deg, transparent 1em, #aaa 0);
+}
+
+.card-4:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0.74em;
+    width: 2em;
+    height: 1.156em;
+    transform-origin: bottom right;
+    transform: rotate(30deg);
+    background:linear-gradient(-150deg,transparent 1em,#eee 0);
+    -webkit-filter: drop-shadow(-1px 2px 2px rgba(100,100,100,0.5));
+}
+
+
