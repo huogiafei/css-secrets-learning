@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom checkboxes 自定义checkbox</title>
+    <link rel="stylesheet" href="../css/ls31.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!-- Refers: https://www.thecssninja.com/css/custom-inputs-using-css -->
+<!-- Refers: http://labs.thecssninja.com/bootleg/ -->
+<h1 class="title">Custom Checkboxes</h1>
+<div class="wrap">
+    <div class="box">
+        <div class="group group-1">
+            <p class="group-item">
+                <input type="checkbox" id="check1"/>
+                <label for="check1">Origin</label></p>
+
+            <p class="group-item">
+                <input type="checkbox" id="check2" checked/>
+                <label for="check2">Checked</label>
+            </p>
+
+            <p class="group-item">
+                <label for="check3"><input type="checkbox" id="check3" disabled/>Disabled</label>
+            </p>
+        </div>
+
+        <p class="box-desc">input+label::before</p>
+    </div>
+
+    <div class="box">
+        <div class="group group-2">
+            <p class="group-item">
+                <input type="checkbox" id="check4"/>
+                <label for="check4">Awesome</label></p>
+            <p class="group-item">
+                <input type="checkbox" checked id="check5"/>
+                <label for="check5">Checked</label></p>
+            <p class="group-item">
+                <input type="checkbox" id="check6" disabled/>
+                <label for="check6">Disabled</label></p>
+        </div>
+        <p class="box-desc">Font Awesome</p>
+    </div>
+
+    <div class="box">
+        <div class="group group-3">
+            <p class="group-item">
+                <input type="checkbox" id="check7"/>
+                <label for="check7">Moon</label></p>
+            <p class="group-item">
+                <input type="checkbox" checked id="check8"/>
+                <label for="check8">Checked</label></p>
+            <p class="group-item">
+                <input type="checkbox" id="check9" disabled/>
+                <label for="check9">Disabled</label></p>
+        </div>
+        <p class="box-desc">IcoMoon(font)</p>
+    </div>
+
+    <div class="box">
+        <div class="group group-4">
+            <p class="group-item">
+                <input type="checkbox" id="check10"/>
+                <label for="check10">Moon</label></p>
+            <p class="group-item">
+                <input type="checkbox" checked id="check11"/>
+                <label for="check11">Checked</label></p>
+            <p class="group-item">
+                <input type="checkbox" id="check12" disabled/>
+                <label for="check12">Disabled</label></p>
+        </div>
+        <p class="box-desc">IcoMoon(svg)</p>
+    </div>
+
+    <div class="box">
+        <div class="group group-5">
+            <p class="group-item">
+                <input type="checkbox" id="check13"/>
+                <label for="check13">Custom</label></p>
+            <p class="group-item">
+                <input type="checkbox" checked id="check14"/>
+                <label for="check14">Checked</label></p>
+            <p class="group-item">
+                <input type="checkbox" id="check15" disabled/>
+                <label for="check15">Disabled</label></p>
+        </div>
+        <p class="box-desc">Custom</p>
+    </div>
+
+    <div class="box">
+        <div class="switch">
+            <input type="checkbox" id="switch"/>
+            <label for="switch">Switch</label>
+        </div>
+        <p class="box-desc">Toggle button</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realistic Text Effects 现实中文字效果</title>
+    <link rel="stylesheet" href="../css/ls27.css">
+</head>
+<body>
+<!-- Tool: http://leaverou.github.io/contrast-ratio/-->
+<h1 class="title">Realistic Text Effects</h1>
+<div class="wrap">
+    <div class="box">
+        <p class="text text-1">Hello World</p>
+        <p class="box-desc">concave</p>
+    </div>
+    <div class="box">
+        <p class="text text-2">Hello World</p>
+        <p class="box-desc">protruding</p>
+    </div>
+
+    <div class="box">
+        <p class="text text-3">Hello World</p>
+        <p class="box-desc">stroked text(text-shadow)</p>
+    </div>
+    <div class="box">
+        <p class="text text-4">
+            <svg>
+            <use xlink:href="#css" />
+            <text id="css" y="1em">Hello World</text>
+        </svg></p>
+        <p class="box-desc">stroked text(SVG)</p>
+    </div>
+
+    <div class="box">
+        <p class="text text-5">Foobar</p>
+        <p class="box-desc">Glowing(hover)</p>
+    </div>
+
+    <div class="box">
+        <p class="text text-6">Extruded</p>
+        <p class="box-desc">extruded</p>
+    </div>
+
+    <div class="box">
+        <p class="text text-7">Extruded</p>
+        <p class="box-desc">extruded2</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.title {
+    margin: 1.2em auto 0 auto;
+    text-align: center;
+    color: #666;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 150px);
+    padding: 30px;
+    color: #333;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.box {
+    margin: 10px 30px;
+}
+
+.box-desc {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    text-align: center;
+}
+
+.text-1 {
+    color: #222;
+    text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+    /*background: hsl(210, 13%, 60%);
+    color: hsl(210, 13%, 30%);
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.8);*/
+}
+
+.text-2 {
+    color: #444;
+    text-shadow: 0 -1px 1px hsla(355, 100%, 2%, 0.84);
+}
+
+.text-3 {
+    color: #333;
+    text-shadow: 1px 1px #aaa, -1px -1px #aaa,
+    1px -1px #aaa, -1px 1px #aaa;
+}
+
+.text-4 {
+    color: #333;
+}
+
+.text-4 text {
+    fill: #333;
+}
+
+.text-4 svg {
+    overflow: visible;
+    width: 6em;
+    height: 1.1em;
+}
+
+.text-4 use {
+    stroke: black;
+    stroke-width: 6;
+    stroke-linejoin: round;
+}
+
+.text-5 {
+    color: #ff4781;
+    transition: 0.4s;
+}
+
+.text-5:hover {
+    text-shadow: 0 0 .1em #fff, 0 0 .3em #fff;
+    color: transparent;
+}
+
+.text-6 {
+    letter-spacing: 0.1em;
+    color: #eee;
+    text-shadow: 0 1px hsl(0, 0%, 85%),
+    0 2px hsl(0, 0%, 80%),
+    0 3px hsl(0, 0%, 75%);
+}
+
+.text-7{
+    padding: 0.8em 1em;
+    color: white;
+    background: hsl(0,50%,45%);
+    text-shadow: 1px 1px black, 2px 2px black,
+    3px 3px black, 4px 4px black,
+    5px 5px black, 6px 6px black,
+    7px 7px black, 8px 8px black;
+}
+
+
+
+
+

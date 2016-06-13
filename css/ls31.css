@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.title {
+    margin: 1.2em auto 0 auto;
+    text-align: center;
+    color: #666;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 150px);
+    padding: 30px;
+    color: #333;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.box {
+    margin: 10px 30px;
+}
+
+.box-desc {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.group{
+    font-size: 18px;
+    border:1px solid #aaa;
+    padding: 0.6em 1.2em;
+}
+
+.group-item{
+    margin: 0.5em 0;
+}
+
+.group-1 label{
+    color: #aaa;
+}
+
+.group-1 input[type="checkbox"] + label::before{
+    content: '\a0';
+    display: inline-block;
+    vertical-align: 0.2em;
+    width: .8em;
+    height: .8em;
+    margin-right: .2em;
+    border-radius: .2em;
+    background: #eee;
+    text-indent:.15em;
+    line-height: .65;
+}
+
+.group-1 input[type="checkbox"]:checked + label::before {
+    content: '\2713';
+    color: yellowgreen;
+    background-color: #cdffcf;
+}
+
+/*fonts awesome*/
+.group-2{
+    background-color: #eee;
+}
+
+.group-2 label::before{
+    font-family:'FontAwesome';
+    display: inline-block;
+    margin-right: .5em;
+    color: #0c9;
+    width: 1em;
+    height: 1em;
+}
+
+.group-2 input[type='checkbox'] + label::before{
+    content: '\a0\f096';
+}
+
+.group-2 input[type='checkbox']:checked + label::before{
+    content: '\a0\f14a';
+}
+
+.group-2 input[type='checkbox']:disabled + label::before{
+    content: '\a0\f0c8';
+    color: #666;
+}
+
+.group-2 input[type='checkbox']{
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+
+/*icoMoon*/
+.group-3{
+    background-color: #263238;
+    color: #0c9;
+}
+
+@font-face {
+    font-family: 'checkbox';
+    src:
+            url('../img/fonts/checkbox.ttf?10eorf') format('truetype'),
+            url('../img/fonts/checkbox.woff?10eorf') format('woff'),
+            url('../img/fonts/checkbox.svg?10eorf#checkbox') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'checkbox' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check_box_outline_blank:before {
+    content: "\e900";
+}
+.icon-check_box:before {
+    content: "\e901";
+}
+
+.group-3 label::before{
+    font-family:'checkbox';
+    display: inline-block;
+    margin-right: .5em;
+    color: #0c9;
+    font-size: 24px;
+    vertical-align: -0.12em;
+
+}
+
+.group-3 input[type='checkbox'] + label::before{
+    content: '\e900';
+}
+
+.group-3 input[type='checkbox']:checked + label::before{
+    content: '\e901';
+}
+
+.group-3 input[type='checkbox']:disabled + label::before{
+    content: '\e900';
+    color: rgba(141, 141, 141, 0.2);
+}
+
+.group-3 input[type='checkbox']{
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+
+/*svg*/
+.group-4{
+    color: #ff99ee;
+    background-color: #30222a;
+}
+
+.group-4 label::before{
+    display: inline-block;
+    margin-right: .5em;
+    color: #0c9;
+    width: 20px;
+    height: 20px;
+    vertical-align: -0.12em;
+
+}
+
+.group-4 input[type='checkbox'] + label::before{
+    content: '';
+    background: url("../img/marquee.svg") no-repeat center;
+
+}
+
+.group-4 input[type='checkbox']:checked + label::before{
+    content: '';
+    background: url("../img/square-check.svg") no-repeat center;
+}
+
+.group-4 input[type='checkbox']:disabled + label::before{
+    content: '\e900';
+    color: rgba(141, 141, 141, 0.2);
+    background: url("../img/marquee.svg") no-repeat center;
+    opacity: 0.2;
+}
+
+.group-4 input[type='checkbox']{
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+
+/*custom*/
+.group-5{
+    background: #e1d3d0;
+    color: #E74C3C;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.group-5 label{
+    color: #2d100c;
+}
+
+.group-5 input[type='checkbox']{
+    position: absolute;
+    clip: rect(0,0,0,0);
+
+}
+
+
+.group-5 input[type='checkbox'] + label::before{
+    content: 'T';
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: -.1em;
+    margin-right: 0.5em;
+    display: inline-block;
+    border:2px solid #E74C3C;
+    border-radius: 0.1em;
+    transition: all 0.3s ease-in;
+    line-height: 1.3;
+    text-align: center;
+    color: transparent;
+    box-shadow: inset 0 0 0 0 transparent;
+}
+
+.group-5 input[type='checkbox']:checked + label::before{
+    content: 'T';
+    color: #fff;
+    box-shadow: inset 0 0 10px 10px #E74C3C,
+    0 4px 4px  hsla(0,0%,0%,0);
+
+}
+
+.group-5 input[type='checkbox']:disabled + label::before{
+    content: '\a0';
+    opacity: 0.2;
+}
+
+.group-5 input[type='checkbox']:focus + label{
+    text-decoration: underline;
+}
+
+.switch input[type="checkbox"] {
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+.switch input[type="checkbox"] + label {
+    display: inline-block;
+    padding: .3em .5em;
+    background: #ccc;
+    background-image: linear-gradient(#ddd, #bbb);
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3em;
+    box-shadow: 0 1px white inset;
+    text-align: center;
+    text-shadow: 0 1px 1px white;
+}
+.switch input[type="checkbox"]:checked + label,
+.switch input[type="checkbox"]:active + label {
+    box-shadow: .05em .1em .2em rgba(0,0,0,.6) inset;
+    border-color: rgba(0,0,0,.3);
+    background: #bbb;
+}
+
+
+
+
+
+
+
+
+
+

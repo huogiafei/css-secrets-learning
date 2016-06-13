@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Text 环型文字</title>
+    <link rel="stylesheet" href="../css/ls28.css">
+</head>
+<body>
+<!-- Refer: http://juliancheal.co.uk/ -->
+<h1 class="title">Circular Text</h1>
+<div class="wrap">
+    <div class="box">
+        <div class="circular">
+            <svg viewBox="0 0 100 100">
+                <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle"/>
+                <path d="M 20,50 a 30,30 0 1,1 0,1 z" id="circle2"/>
+                <text>
+                    <textPath xlink:href="#circle">
+                        ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+    </div>
+</div>
+</body>
+</html>

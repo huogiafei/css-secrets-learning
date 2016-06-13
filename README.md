@@ -51,3 +51,11 @@ CSS Secrets book learning
 5. 连字：中文来说没多大用处，英文的话也是要配合字体使用
 6. 华丽的&符号：local + unicode-range 可以让指定的字符使用特别的字体
 7. 自定义下划线：实现下划线还是有多种方式：underline,border,box-shadow,bg:linear-gradient,使用text-shadow还可以避开例如g字符的降部，波浪下划线还要自己画图算一下(高中几何的感觉)
+8. 现实中的文字效果：text-shadow + svg
+9. 环形文字：svg + textPath
+
+**CH06 User Experience**
+
+1. 合适的鼠标光标（cursor）: help,not-allowed感觉可以经常用到，还有none这个比较好玩，除了可以整蛊别人之外，目前还没想到实际用途
+2. 扩大可点击区域：移动开发优化，两种方案：1.border 2::before。第二种方案更好，不影响布局
+3. 自定义复选框：通过:check完全不再依赖js，而且最爽的是可以完全自定义样式，里面有个要注意的是需要content:'\a0'（不换行空格）做占位
