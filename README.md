@@ -59,3 +59,7 @@ CSS Secrets book learning
 1. 合适的鼠标光标（cursor）: help,not-allowed感觉可以经常用到，还有none这个比较好玩，除了可以整蛊别人之外，目前还没想到实际用途
 2. 扩大可点击区域：移动开发优化，两种方案：1.border 2::before。第二种方案更好，不影响布局
 3. 自定义复选框：通过:check完全不再依赖js，而且最爽的是可以完全自定义样式，里面有个要注意的是需要content:'\a0'（不换行空格）做占位
+4. 弱化背景（阴影）：个人比较喜欢box-shadow方案，如果使用：before的话，当父层级出现背景的时候，遮罩层会被挡住
+5. 弱化背景（模糊）：使用blur和其他filter配合，不过边缘光晕需要注意一下，需要在父层级那里添加box-shadow
+6. 滚动提示：两层背景 + background-attachment(scroll，local)
+

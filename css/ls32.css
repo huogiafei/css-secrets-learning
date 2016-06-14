@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.title {
+    margin: 1.2em auto 0 auto;
+    text-align: center;
+    color: #666;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 150px);
+    padding: 30px;
+    color: #333;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.box {
+    margin: 10px 30px;
+}
+
+.box-desc {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.wrap {
+    perspective: 500px;
+}
+
+.frame {
+    position: relative;
+    box-shadow: 0 0 10px 2px rgba(26, 26, 26, 0.3);
+    background-color: #ddd;
+    width: 400px;
+    height: 300px;
+}
+
+.main {
+    padding: 1em 1.3em;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(hsla(0, 50%, 80%, 0.2) 50%, hsla(0, 50%, 80%, 0.6) 0) repeat-y center/100% 4em,
+    url("../img/Literate_fools.png") no-repeat center/220% 200%;
+    background-origin: content-box, border-box;
+    line-height: 2em;
+    color: #333;
+}
+
+.pop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+    display: flex;
+}
+
+.pop-content {
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+    color: #0c9;
+    background: #eee;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+
+.frame-1 .pop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/*frame2*/
+.frame-2,
+.frame-2 .main {
+    background: none;
+}
+
+.frame-2 .pop-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.frame-2 .pop-content:before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -150px;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/*frame3*/
+.frame-3{
+    overflow: hidden;
+}
+.frame-3 .pop-content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    box-shadow: 0 0 0 50vmax rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+
+

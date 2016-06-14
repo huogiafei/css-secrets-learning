@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.title {
+    margin: 1.2em auto 0 auto;
+    text-align: center;
+    color: #666;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 150px);
+    padding: 30px;
+    color: #333;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.box {
+    margin: 10px 30px;
+}
+
+.box-desc {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.title-wrapper{
+    position: relative;
+    width: 480px;
+    margin: 0 auto;
+}
+
+.lego{
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background-color: currentColor;
+    color: #2c9057;
+    bottom: 0;
+    box-shadow: 5px 1px 5px -4px rgba(0,0,0,0.4);
+    -webkit-filter: drop-shadow(1px 1px 5px rgba(0,0,0,0.2));
+}
+
+.lego:nth-child(even){
+    left: 0;
+}
+
+.lego:nth-child(odd){
+    right: 0;
+}
+
+.lego:before,
+.lego:after{
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 8px;
+    top: -8px;
+    background: linear-gradient(currentColor,currentColor) no-repeat top left /70% 80% #0c1d0e;
+}
+
+.lego:before{
+    left: 6px;
+}
+
+.lego:after{
+    right: 6px;
+}
+
+.lego:nth-child(n+4){
+    bottom: 30px;
+    color: rgba(249, 255, 131, 0.68);
+}
+
+/*main*/
+.comp{
+    width: 400px;
+    height: 300px;
+    resize: horizontal;
+    overflow: hidden;
+}
+
+.comp img{
+    display: block;
+
+
+}
