@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taming table column widths 精确控制表格列宽</title>
+    <link rel="stylesheet" href="../css/ls37.css">
+</head>
+<body>
+<!-- Refer:https://css-tricks.com/fixing-tables-long-strings/ -->
+<h1 class="title">Taming table column widths</h1>
+<div class="wrap">
+    <div class="box">
+        <table border="1px" class="table-1">
+            <tr>
+                <td>对两列表格来说，默认的表格布
+                    局算法在处理不同内容时的不同
+                    表现</td>
+                <td>指定单元格的宽度，则这些单元格就会根据它们内容的长
+                    短来分配宽度。也就是说，内容较长的单元格所能分配到
+                    的宽度也较多</td>
+            </tr>
+            <tr>
+                <td>这种固定表格布局算法不仅更容易预测、便于使用，同时也明显更快。</td>
+                <td>解决方案来自于 CSS 2.1 中一个鲜为人知的属性，叫作 table-layout。
+                    它的默认值是 auto，其行为模式被称作自动表格布局算法，也就是我们最
+                    为熟悉的表格布局行为</td>
+            </tr>
+            <tr>
+                <td><img src="../img/cd_cover.jpg" alt=""></td>
+                <td><img src="../img/totoro.jpg" alt=""></td>
+            </tr>
+
+        </table>
+        <p class="box-desc">table-layout:auto(default)</p>
+    </div>
+
+
+    <div class="box">
+        <table border="1px" class="table-3">
+            <tr>
+                <td>对两列表格来说，默认的表格布
+                    局算法在处理不同内容时的不同
+                    表现</td>
+                <td>指定单元格的宽度，则这些单元格就会根据它们内容的长
+                    短来分配宽度。也就是说，内容较长的单元格所能分配到
+                    的宽度也较多</td>
+            </tr>
+            <tr>
+                <td>这种固定表格布局算法不仅更容易预测、便于使用，同时也明显更快。</td>
+                <td>解决方案来自于 CSS 2.1 中一个鲜为人知的属性，叫作 table-layout。
+                    它的默认值是 auto，其行为模式被称作自动表格布局算法，也就是我们最
+                    为熟悉的表格布局行为</td>
+            </tr>
+            <tr>
+                <td><img src="../img/cd_cover.jpg" alt=""></td>
+                <td><img src="../img/totoro.jpg" alt=""></td>
+            </tr>
+        </table>
+        <p class="box-desc">table-layout:fixed</p>
+    </div>
+
+    <div class="box">
+        <table border="1px" class="table-2">
+            <tr>
+                <td>对两列表格来说，默认的表格布
+                    局算法在处理不同内容时的不同
+                    表现</td>
+                <td>指定单元格的宽度，则这些单元格就会根据它们内容的长
+                    短来分配宽度。也就是说，内容较长的单元格所能分配到
+                    的宽度也较多</td>
+            </tr>
+            <tr>
+                <td>这种固定表格布局算法不仅更容易预测、便于使用，同时也明显更快。</td>
+                <td>解决方案来自于 CSS 2.1 中一个鲜为人知的属性，叫作 table-layout。
+                    它的默认值是 auto，其行为模式被称作自动表格布局算法，也就是我们最
+                    为熟悉的表格布局行为</td>
+            </tr>
+            <tr>
+                <td><img src="../img/cd_cover.jpg" alt=""></td>
+                <td><img src="../img/totoro.jpg" alt=""></td>
+            </tr>
+        </table>
+        <p class="box-desc">auto (no-wrap +  text-overflow:ellipsis) </p>
+    </div>
+
+    <div class="box">
+        <table bor11der="1px" class="table-4">
+            <tr>
+                <td>对两列表格来说，默认的表格布
+                    局算法在处理不同内容时的不同
+                    表现</td>
+                <td>指定单元格的宽度，则这些单元格就会根据它们内容的长
+                    短来分配宽度。也就是说，内容较长的单元格所能分配到
+                    的宽度也较多</td>
+            </tr>
+            <tr>
+                <td>这种固定表格布局算法不仅更容易预测、便于使用，同时也明显更快。</td>
+                <td>解决方案来自于 CSS 2.1 中一个鲜为人知的属性，叫作 table-layout。
+                    它的默认值是 auto，其行为模式被称作自动表格布局算法，也就是我们最
+                    为熟悉的表格布局行为</td>
+            </tr>
+            <tr>
+                <td><img src="../img/cd_cover.jpg" alt=""></td>
+                <td><img src="../img/totoro.jpg" alt=""></td>
+            </tr>
+        </table>
+        <p class="box-desc">fixed (no-wrap +  text-overflow:ellipsis )</p>
+    </div>
+
+</div>
+</body>
+</html>

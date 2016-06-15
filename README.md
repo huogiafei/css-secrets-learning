@@ -62,4 +62,5 @@ CSS Secrets book learning
 4. 弱化背景（阴影）：个人比较喜欢box-shadow方案，如果使用：before的话，当父层级出现背景的时候，遮罩层会被挡住
 5. 弱化背景（模糊）：使用blur和其他filter配合，不过边缘光晕需要注意一下，需要在父层级那里添加box-shadow
 6. 滚动提示：两层背景 + background-attachment(scroll，local)
+7. 交互式的图片对比控件：两层image
 

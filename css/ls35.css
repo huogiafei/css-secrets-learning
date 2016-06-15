@@ -88,14 +88,39 @@ body {
 
 /*main*/
 .comp{
-    width: 400px;
-    height: 300px;
-    resize: horizontal;
+    position: relative;
+    margin: auto;
+    height: 700px;
     overflow: hidden;
+    display: inline-block;
+}
+
+.comp > div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    max-width: 100%;
+    overflow: hidden;
+    resize:horizontal;
 }
 
 .comp img{
     display: block;
+}
 
-
+.comp > div::before {
+    content: '';
+    position: absolute;
+    bottom: -15px; right: -15px;
+    /*width: 12px; height: 12px;
+    background: white;*/
+    cursor: ew-resize;
+    width: 30px;
+    height: 30px;
+    -webkit-user-select: none;
+    user-select: none;
+    background: radial-gradient(#09e ,#0c9);
+    border-radius:50%
 }
