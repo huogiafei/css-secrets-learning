@@ -62,5 +62,12 @@ CSS Secrets book learning
 4. 弱化背景（阴影）：个人比较喜欢box-shadow方案，如果使用：before的话，当父层级出现背景的时候，遮罩层会被挡住
 5. 弱化背景（模糊）：使用blur和其他filter配合，不过边缘光晕需要注意一下，需要在父层级那里添加box-shadow
 6. 滚动提示：两层背景 + background-attachment(scroll，local)
-7. 交互式的图片对比控件：两层image
+7. 交互式的图片对比控件：两层image重叠，使用resize可以调整上层img的宽度，不过为了UI统一和易用性，都要自定义一下底部三角箭头（Chrome必须重写这块才出现箭头），不过感觉还是有点遗憾的就是控制区只有小箭头。
+
+**CH07 Structure & Layout**
+
+1.自适应内部元素：width:min-content
+2.精确控制表格列宽：table-layout:fixed可以获得更灵活的table布局
+3.根据兄弟元素数量来设置样式：非常黑魔法的一节，通过first-child,nth-child和nth-last-child互相组合这个idea我非常佩服
+4.
 

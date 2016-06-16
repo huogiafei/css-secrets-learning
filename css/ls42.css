@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.title {
+    margin: 1.2em auto 0 auto;
+    text-align: center;
+    color: #666;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 150px);
+    padding: 30px;
+    color: #333;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.box {
+    margin: 10px 30px;
+}
+
+.box-desc {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.stage {
+    background: #eee;
+    width: 400px;
+    height: 450px;
+}
+
+.ball {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: radial-gradient(#ffd4cb 10%, transparent 60%, transparent 0) no-repeat top 10% left 20% /70% 70%,
+    radial-gradient(#f66, #c35454) center /100% 100%;
+    box-shadow: inset -1px -1px 10px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 15px rgba(0, 0, 0, 0.2);
+
+    animation: bounce 3s ease-in;
+}
+
+@keyframes bounce {
+    60%, 80%, to {
+        transform: translateY(400px);
+        animation-timing-function: ease;
+    }
+    70% {
+        transform: translateY(300px);
+    }
+    90% {
+        transform: translateY(360px);
+    }
+}
+
+.ball {
+    /* 外观样式 */
+    animation: bounce 3s cubic-bezier(.1, .25, 1, .25) infinite alternate;
+}
+
+/*input tips*/
+.input-wrap {
+    background-color: #eee;
+    padding: 1em;
+}
+
+label {
+    color: #666;
+    position: relative;
+}
+
+.input-1 input:not(:focus) + .callout {
+    transform: scale(0);
+    transition:0.3s transform;
+}
+
+.input-1 input:focus + .callout {
+    animation: elastic-grow 0.5s;
+    animation-direction: alternate;
+}
+
+.callout {
+    padding: 1em 1.5em;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    top: 1.5em;
+    left: 8em;
+    /*transition:.5s transform;*/
+    width: 10em;
+    background-color: #ffa3c2;
+    transform-origin: 1.4em -.4em;
+    z-index: 10;
+}
+
+@keyframes elastic-grow {
+    from {
+        transform: scale(0);
+        animation-timing-function: cubic-bezier(.25,.1,.25,1);
+    }
+    70% {
+        transform: scale(1.1);
+        animation-timing-function: cubic-bezier(.1, .25, 1, .25);
+    }
+}
+
+/*transition*/
+.input-2 input:not(:focus) + .callout {
+    transform: scale(0);
+    transition-timing-function: ease;
+}
+
+.input-2 .callout {
+    transition: .5s cubic-bezier(.25, .1, .3, 1.5);
+}
+
+
+
+
+
+
+
+
+
+

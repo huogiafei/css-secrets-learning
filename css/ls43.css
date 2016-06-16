@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+}
+
+.title {
+    margin: 1.2em auto 0 auto;
+    text-align: center;
+    color: #666;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.wrap {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 150px);
+    padding: 30px;
+    color: #333;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.box {
+    margin: 10px 30px;
+}
+
+.box-desc {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.movie {
+    position: relative;
+    width: 1400px;
+    height: 200px;
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: url("../img/morris.png");
+    opacity: 0.2;
+    left: 600px;
+    animation: split 6s infinite steps(12);
+}
+
+.stage {
+    position: absolute;
+    z-index: 2;
+    background: url("../img/morris.png");
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    margin-left: -100px;
+    animation: say 6s infinite steps(12);
+}
+
+@keyframes say {
+    to {
+        background-position: -2400px 0;
+    }
+}
+
+@keyframes split {
+    to {
+        transform: translateX(-2400px);
+    }
+}
+
+
+
+
+
+
+
+
+

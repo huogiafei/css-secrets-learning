@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vertical centering 垂直居中</title>
+    <link rel="stylesheet" href="../css/ls40.css">
+</head>
+<body>
+<!-- Interesting(因翠丝听) ：
+    “44 years ago we put a man on the moon, yet we still can’t vertically centre things in CSS.”
+                                    — James Anderson (twitter.com/jsa/status/358603820516917249)-->
+
+<!-- Refer: http://stackoverflow.com/users/479836/charlie
+ -->
+<h1 class="title">vertical centering</h1>
+<div class="wrap">
+    <div class="box">
+        <div class="card">
+            <main>
+                <h2>Excuse me,CSS vertical centering</h2>
+                <p>44 years ago we put a man on the moon, yet we still can’t vertically centre things in CSS.</p>
+            </main>
+        </div>
+        <p class="box-desc">normal</p>
+    </div>
+    <!-- method1  不固定高度-->
+    <div class="box">
+        <div class="card">
+            <main class="main-1">
+                <h2>Excuse me,CSS vertical centering</h2>
+                <p>44 years ago we put a man on the moon, yet we still can’t vertically centre things in CSS.</p>
+                <p> — James Anderson (twitter.com/jsa/status/358603820516917249)</p>
+            </main>
+        </div>
+        <p class="box-desc">abs + h:min-content + w:calc + (l,r,b,t:0)</p>
+    </div>
+
+    <!-- method-2 固定高度-->
+    <div class="box">
+        <div class="card">
+            <main class="main-2">
+                <h2>Excuse me,CSS vertical centering</h2>
+                <p>44 years ago we put a man on the moon, yet we still can’t vertically centre things in CSS.</p>
+            </main>
+        </div>
+        <p class="box-desc">abs + w,h(fixed) + (l,r ：50%） + (ml,mr) </p>
+    </div>
+
+    <!-- method-3 flex -->
+    <div class="box">
+        <div class="card" style="display: flex">
+            <main class="main-3">
+                <h2>Excuse me,CSS vertical centering</h2>
+                <p>44 years ago we put a man on the moon, yet we still can’t vertically centre things in CSS.</p>
+            </main>
+        </div>
+        <p class="box-desc">parent(flex)  + child(margin:auto)</p>
+    </div>
+
+    <!-- method-4 translate -->
+    <div class="box">
+        <div class="card">
+            <main class="main-4">
+                <h2>Excuse me,CSS vertical centering</h2>
+                <p>44 years ago we put a man on the moon, yet we still can’t vertically centre things in CSS.</p>
+            </main>
+        </div>
+        <p class="box-desc">t:50% + l:50% + translate(-50%,-50%)</p>
+    </div>
+
+    <!-- method-5 vh -->
+    <div class="box">
+        <div class="card">
+            <button id="popup">popup</button>
+            <div class="pop" >
+                <main class="main-5">
+                    <h2>Excuse me,CSS vertical centering</h2>
+                    <p>44 years ago we put a man on the moon, yet we still can’t vertically centre things in CSS.</p>
+                </main>
+            </div>
+        </div>
+        <p class="box-desc">m:50vh auto 0 + translateY(-50%)</p>
+    </div>
+
+    <!-- method-6 flex textNode -->
+    <div class="box">
+        <div class="card" style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;">
+            this is a textNode without wrapper
+        </div>
+        <p class="box-desc">flex + [align-items , justify-content]:center </p>
+    </div>
+
+    <!-- method-7 align-self -->
+    <div class="box">
+        <div class="card">
+            <main class="main-7">
+                <h2>Excuse me,CSS vertical centering</h2>
+                <p>44 years ago we put a man on the moon, yet we still can’t vertically centre things in CSS.</p>
+            </main>
+        </div>
+        <p class="box-desc">align-self(not support now)</p>
+    </div>
+</div>
+<script>
+    document.getElementById('popup').addEventListener('click', function(){
+        console.log(this.nextElementSibling );
+        this.nextElementSibling .style.display = 'block';
+    })
+    document.querySelector('.pop').onclick = function(){
+        this.style.display = 'none';
+    }
+</script>
+</body>
+</html>
