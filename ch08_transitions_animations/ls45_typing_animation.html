@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing animation 打字动画</title>
+    <link rel="stylesheet" href="../css/ls45.css">
+</head>
+<body>
+<h1 class="title">Typing animation</h1>
+<div class="wrap">
+    <div class="box">
+        <div class="text-wrap">
+            <p class="text text-1">Interesting</p>
+            <p class="text text-1">Typing</p>
+            <p class="text text-1">Animation</p>
+        </div>
+        <p class="box-desc">blink</p>
+    </div>
+    <div>blink</div>
+    <div class="box">
+        <div class="text-wrap">
+            <p class="text text-2">Hello</p>
+            <p class="text text-3">Hello</p>
+        </div>
+        <p class="box-desc">letter-spacing</p>
+    </div>
+</div>
+<script>
+    var nodeArray = document.querySelectorAll('.text');
+    nodeArray.forEach(function (node) {
+        var len = node.textContent.length,
+                s = node.style,
+                s2 = node.currentStyle || document.defaultView.getComputedStyle(node, '');
+        //s.width = len + 'ch';
+
+        //cal letter spacing
+        var space = (len + 1) * parseFloat(s2.letterSpacing);
+        console.log(s2.letterSpacing);
+        s.width = `calc(${len}ch + ${space}px )`;
+
+
+        s.animationTimingFunction = `steps(${len}),steps(1)`;
+    })
+
+</script>
+</body>
+</html>

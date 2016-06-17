@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinking 闪烁效果</title>
+    <link rel="stylesheet" href="../css/ls44.css">
+</head>
+<body>
+<h1 class="title">Blinking</h1>
+<div class="wrap">
+    <div class="box">
+        <p class="blink blink-1">Html</p>
+        <button class="btn" data-isPlay ='false'>Play</button>
+        <p class="box-desc">50% transparent linear</p>
+    </div>
+
+    <div class="box">
+        <p class="blink blink-2">Css</p>
+        <button class="btn" data-isPlay ='false'>Play</button>
+        <p class="box-desc">50% transparent ease alternate</p>
+    </div>
+
+    <div class="box">
+        <p class="blink blink-3">Javascript</p>
+        <button class="btn" data-isPlay ='false'>Play</button>
+        <p class="box-desc">steps(1)</p>
+    </div>
+</div>
+<script>
+    var btnArray = document.getElementsByClassName('btn');
+    for(var i=0;i<btnArray.length;i++){
+        btnArray[i].addEventListener('click',function(e){
+            if(this.getAttribute('data-isPlay') == 'false'){
+                this.previousElementSibling.style.animationPlayState = 'running';
+                this.innerHTML = 'Paused';
+                this.setAttribute('data-isPlay','true');
+            }
+            else{
+                this.previousElementSibling.style.animationPlayState = 'paused';
+                this.innerHTML = 'Play';
+                this.setAttribute('data-isPlay','false');
+            }
+        })
+    }
+</script>
+</body>
+</html>
