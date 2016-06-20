@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="../css/ls14.css">
 </head>
 <body>
+<!-- book-demo:
+    play.csssecrets.io/pie-static
+    play.csssecrets.io/pie-svg
+ -->
+
+
 <h1 class="title">Simple Pie Charts</h1>
 <div class="flower"></div>
-<div class="wrap">
+<div class="wrap" style="height: auto">
+    <!-- css  -->
     <div class="box">
         <div class="pie pie-1" data-percent="20%"></div>
         <p class="box-desc">20%</p>
@@ -56,16 +63,139 @@
         <p class="box-desc">ch03 finish!</p>
     </div>
 </div>
+<p class="wrap-desc">plan A : css</p>
+
+<div class="wrap" style="height: auto;">
+    <!-- svg  -->
+    <div class="box svg-pie svg-pie-1">
+        <svg width="100" height="100">
+            <circle r="30" cx="50" cy="50"/>
+        </svg>
+        <p class="box-desc">svg</p>
+    </div>
+
+    <div class="box svg-pie svg-pie-2">
+        <svg width="100" height="100">
+            <circle r="30" cx="50" cy="50"/>
+        </svg>
+        <p class="box-desc">stroke-dasharray(s-d)</p>
+    </div>
+
+    <div class="box svg-pie svg-pie-3">
+        <svg width="100" height="100">
+            <circle r="30" cx="50" cy="50"/>
+        </svg>
+        <p class="box-desc">s-d:(2πr 2πr)</p>
+    </div>
+
+    <div class="box svg-pie svg-pie-4">
+        <svg width="100" height="100">
+            <circle r="30" cx="50" cy="50"/>
+        </svg>
+        <p class="box-desc">s-d:(πr 2πr)</p>
+    </div>
+
+    <div class="box svg-pie svg-pie-5">
+        <svg width="100" height="100">
+            <circle r="25" cx="50" cy="50"/>
+        </svg>
+        <p class="box-desc">stroke:2r</p>
+    </div>
+
+    <div class="box svg-pie svg-pie-6">
+        <svg width="100" height="100">
+            <circle r="25" cx="50" cy="50"/>
+        </svg>
+        <p class="box-desc">pie</p>
+    </div>
+
+    <div class="box svg-pie svg-pie-7">
+        <svg width="100" height="100">
+            <circle r="25" cx="50" cy="50"/>
+        </svg>
+        <p class="box-desc">animation</p>
+    </div>
+
+    <div class="box svg-pie svg-pie-8">
+        <svg viewBox="0 0 32 32">
+            <circle r="16" cx="16" cy="16"/>
+        </svg>
+        <p class="box-desc">33%</p>
+    </div>
+
+    <div class="box svg-pie svg-pie-9">
+        <div class="svg-pie-part" data-percent="20%">20%</div>
+        <p class="box-desc">20%</p>
+    </div>
+
+    <div class="box svg-pie svg-pie-9">
+        <div class="svg-pie-part" data-percent="80%">80%</div>
+        <p class="box-desc">80%</p>
+    </div>
+
+    <div class="box svg-pie svg-pie-10">
+        <svg viewBox="0 0 32 32">
+            <circle class="c1" r="16" cx="16" cy="16"/>
+            <circle class="c2" r="16" cx="16" cy="16"/>
+            <circle class="c3" r="16" cx="16" cy="16"/>
+        </svg>
+        <p class="box-desc">multiply</p>
+    </div>
+
+    <div class="box svg-pie svg-pie-10 final">
+        <svg viewBox="0 0 32 32">
+            <circle data-percent="10%" r="16" cx="16" cy="16"/>
+            <circle data-percent="20%" r="16" cx="16" cy="16"/>
+            <circle data-percent="30%" r="16" cx="16" cy="16"/>
+            <circle data-percent="40%" r="16" cx="16" cy="16"/>
+        </svg>
+        <p class="box-desc">final</p>
+    </div>
+
+
+</div>
+<p class="wrap-desc">plan B : svg</p>
 <script>
-    document.querySelectorAll('.pie-1').forEach(function(item){
+    document.querySelectorAll('.pie-1').forEach(function (item) {
         var percent = item.getAttribute('data-percent');
         console.log(percent);
-        item.style.animationDelay = '-' + parseInt(percent) +'s';
+        item.style.animationDelay = '-' + parseInt(percent) + 's';
     });
-    document.querySelectorAll('.pie-2').forEach(function(item){
+    document.querySelectorAll('.pie-2').forEach(function (item) {
         var percent = item.textContent;
         console.log(percent);
-        item.style.animationDelay = '-' + parseInt(percent) +'s';
+        item.style.animationDelay = '-' + parseInt(percent) + 's';
+    })
+
+    //svg
+    document.querySelectorAll('.svg-pie-part').forEach(function(pie){
+        var percent = parseFloat(pie.getAttribute('data-percent'));
+        var NS = "http://www.w3.org/2000/svg";
+        var svg = document.createElementNS(NS,'svg');
+        var circle = document.createElementNS(NS,'circle');
+        var title = document.createElementNS(NS,'title');
+
+        circle.setAttribute("r", 16);
+        circle.setAttribute("cx", 16);
+        circle.setAttribute("cy", 16);
+        circle.setAttribute("stroke-dasharray", percent + " 100");
+        svg.setAttribute("viewBox", "0 0 32 32");
+        title.textContent = pie.textContent;
+        pie.textContent = '';
+        svg.appendChild(title);
+        svg.appendChild(circle);
+        pie.appendChild(svg);
+    })
+
+    //final
+    var colorList = ['#fc1','#f66','#09e','#0c9'];
+    var offsetSum = 0;
+    document.querySelectorAll('.final circle').forEach(function(part,i){
+        var percent = parseFloat(part.getAttribute('data-percent'));
+        part.style.stroke = colorList[i%4];
+        part.style.strokeDasharray = percent + ' 100';
+        part.style.strokeDashoffset = '-' +offsetSum;
+        offsetSum += percent;
     })
 </script>
 </body>

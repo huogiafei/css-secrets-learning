@@ -6,11 +6,17 @@
     <title>Frosted glass effect毛玻璃</title>
     <link href='https://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/ls18.css">
-
 </head>
 <body>
-<div class="article">
+<!-- 注意：在使用负的 z-index 来把一个子元素移动到它的父元素下层时，
+            请务必小心：如果父元素的上级元素有背景，则该子元素将出现在它们之后。
+     这一点应该是这个实现毛玻璃的一个限制，当背景不是用在body，而是其他元素的时候，
+             body又有自己的背景色的话，毛玻璃也是实现不了
+-->
 
+<!-- book demo： play.csssecrets.io/frosted-glass -->
+
+<div class="article">
     <main>
         <h1 class="title">Frosted glass effect</h1>
         <pre>

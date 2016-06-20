@@ -83,6 +83,28 @@ body {
     margin: auto;
 }
 
+.circular:before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background-color: #eee;
+    top: 50%;
+    margin-top: -60px;
+    left: 50%;
+    transform-origin: 50% 100%;
+    animation: spin 60s infinite;
+}
+
+@keyframes spin {
+    from{
+        transform:rotate(-110deg);
+    }
+    to{
+        transform:rotate(250deg);
+    }
+}
+
 
 
 

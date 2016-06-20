@@ -27,8 +27,16 @@ body {
     align-items: flex-start;
 }
 
+.wrap-desc{
+    margin-top: -50px;
+    font-size: 24px;
+    color: #ddd;
+    text-align: center;
+}
+
 .box {
     margin: 30px;
+    text-align: center;
 }
 
 .box-desc {
@@ -236,8 +244,122 @@ body {
     top: 20px;
 }
 
+/*svg pie*/
+.svg-pie circle {
+    fill: #eee;
+    stroke: #f66;
+}
 
+.svg-pie-1 circle{
+    stroke-width: 30;
+    stroke:#f66;
+}
 
+.svg-pie-2 circle{
+    stroke-width: 30;
+    stroke-dasharray: 20 10;
+}
+
+.svg-pie-3 circle{
+    stroke-width: 30;
+    stroke-dasharray: 188 188;
+}
+
+.svg-pie-4 circle{
+    stroke-width: 30;
+    stroke-dasharray: 95 188;
+}
+
+.svg-pie-5 circle{
+    stroke-width: 50;
+    stroke-dasharray: 60 158;
+}
+
+.svg-pie-6 svg{
+    border-radius: 50%;
+    transform:rotate(-90deg);
+    background-color: #eee;
+}
+
+.svg-pie-6 circle{
+    stroke-width: 50;
+    stroke-dasharray: 60 158;
+}
+
+.svg-pie-7 svg{
+    border-radius: 50%;
+    transform:rotate(-90deg);
+    background-color: #eee;
+
+    animation: pie-ani;
+}
+
+.svg-pie-7 circle{
+    stroke-width: 50;
+    stroke-dasharray: 0 158;
+    animation: pie-ani 6s linear infinite;
+
+}
+
+@keyframes pie-ani {
+    to {
+        stroke-dasharray: 158 158;
+    }
+}
+
+.svg-pie-8 svg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform:rotate(-90deg);
+    background-color: #eee;
+}
+
+.svg-pie-8 circle{
+    stroke-dasharray: 33 100; /* 33% */
+    stroke-width: 32;
+}
+
+.svg-pie-9 svg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform:rotate(-90deg);
+    background-color: #eee;
+}
+
+.svg-pie-9 circle{
+    stroke-width: 32;
+}
+
+.svg-pie-10 svg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform:rotate(-90deg);
+    background-color: #eee;
+}
+
+.svg-pie-10 circle{
+    stroke-width: 32;
+    fill:transparent;
+}
+
+circle.c1{
+    stroke-dasharray: 10 100;
+}
+
+circle.c2{
+    stroke: #fc1;
+    stroke-dashoffset: -10;
+    stroke-dasharray: 30 100;
+}
+
+circle.c3{
+    stroke: #eea46a;
+    stroke-dashoffset: -40;
+    stroke-dasharray: 61 100;
+}
 
 
 

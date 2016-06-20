@@ -19,38 +19,38 @@ CSS Secrets book learning
 1. 半透明边框： background-clip
 2. 多重边框： outline + border + box-shadow
 3. 灵活的背景定位 ： background-position,background-origin,calc()
-4. 边框内圆角： outline + box-shadow
-5. 条纹背景：这一节开始让我有点黑科技的感觉，通过background可以有很多种背景组合效果，还有45度的时候的条纹分解。
-6. 复杂的背景：这里找了几个典型例子，格子和波点
-7. 伪随机背景：这一节真的是脑洞大开的节奏，原来css可以通过质数这个东西生成随机效果，对想到这点的作者我表示五体投地。
+4. 边框内圆角： outline + box-shadow（outline不跟圆角，box-shadow跟圆角）
+5. 条纹背景：要点三个：1.通过渐变断点设置 2.45度的时候的条纹分解 3.repeating-linear-gradient
+6. 复杂的背景：这里找了几个典型例子，格子和波点,主要是把图案分解成可以repeat的unit，通过bg-position和bg-size去生成图案
+7. 伪随机背景：脑洞大开的一节，css可以通过质数生成随机效果，而这里通过多种颜色片的相互重叠(通过bg-size最小公倍数最大化)。
 8. 连续的图像边框：通过background + gradient可以组合出多种连续边框，例如信封。
 
 **CH03 Shapes**
 
-1. 自适应椭圆：border-radius的值，特别是加上`/`的值代表什么，初始位置是右上角。
+1. 自适应椭圆：border-radius的值，特别是加上`/`分割水平垂直半径，初始位置是右上角。
 2. 平行四边形： :before + skew 
-3. 菱形图片： transform(rotate + scale)和clip-path,clip-path功能非常强大，特意介绍一个[工具](http://bennettfeely.com/clippy/)
-4. 切角效果：从这一节开始就有种用bg拼拼拼的节奏，我的理解bg就是一块块的积木，只要发挥你想象，就可以拼出无限种效果
+3. 菱形图片： transform(rotate + scale)和clip-path,个人偏向clip-path，而transform给我感觉是牵一发动全身，clip-path方面介绍一个[工具](http://bennettfeely.com/clippy/)
+4. 切角效果：1.背景渐变拼接 2.svg + border-image 3.clip-path
 5. 梯形：perspective + rotate + scale,使用3D透视制造梯形效果
-6. 简单的饼图：这一节不太简单(我是学渣)，把每一步分解才基本理解，其中最magic的地方就是animation-play-state:paused 和 animation-delay为负数的组合效果。
+6. 简单的饼图：作为这章的boss,可以说不简单，把每一步分解才基本理解，而且css和svg实现原理差别挺大，css方案最神奇的地方就是animation-play-state:paused 和 animation-delay为负数的组合效果，而我会偏向svg方案
 
 **CH04 Visual Effects**
 
 1. 投影: 扩张半径（第四个参数）为负数 + multiply shadows
 2. 不规则投影：filter:drop-shadow 这里需要注意就是非透明的都会打上投影，例如文案
 3. 染色效果：三种方法：filter(sepia + saturate + hue-rotate),img+mix-blend-mode,bg+background-blend-mode,而且都支持animation
-4. 毛玻璃效果：这个方法好像有个约束的地方就是bg必须在body那一层,原理就是3层组合：bg-image(body,:before),bg-color(main),blur(:before)
-5. 折角效果：这里就要用到高中的学到的几何知识，感觉对于45度的折角来说，代码还是比较dry，但是其他角度的话(通常是30deg,60deg),那就需要用到一些预编译让代码更加DRY，并且写之前要算好尺寸，看到这里，给我的感觉是每一章的最后一小节都是打boss的感觉，爽
+4. 毛玻璃效果：3层组合： 第一层Content,第二层模糊层,第三层背景层,装逼一点的解释就是：content(content/z:0)，blur(wrap:before/z:1),bg-image(wrap/z:-2)
+5. 折角效果：对于45度的折角来说，代码还是比较dry，但是其他角度的话(通常是30deg,60deg),那就需要用到一些预编译让代码更加DRY，并且写之前要算好尺寸
 
 **CH05 Typography**
 
-1. 连字符断行: hyphens,不过支持方面只有edge，Firefox和ios支持，如果平时用中文文案为主的话可以不用考虑
+1. 连字符断行: hyphens,不过支持方面只有edge，Firefox和ios支持
 2. 插入换行: 在dt,dl,dd这种情况下使用content:'\A'和white-space:pre(不合并空白)
 3. 斑马纹文本行： 在table下nth-child的确可以实现zebra效果，而一段文本作为一个整体可以用bg:linear-gradient 和 bg-position(一般文本都有padding)实现
 4. 调整tab的宽度：tab-size,在html输出源码的时候使用
 5. 连字：中文来说没多大用处，英文的话也是要配合字体使用
 6. 华丽的&符号：local + unicode-range 可以让指定的字符使用特别的字体
-7. 自定义下划线：实现下划线还是有多种方式：underline,border,box-shadow,bg:linear-gradient,使用text-shadow还可以避开例如g字符的降部，波浪下划线还要自己画图算一下(高中几何的感觉)
+7. 自定义下划线：实现方式：underline,border,box-shadow,bg:linear-gradient,使用text-shadow还可以避开例如g字符的降部，波浪下划线还要自己画图算一下(高中几何的感觉)
 8. 现实中的文字效果：text-shadow + svg
 9. 环形文字：svg + textPath
 
@@ -82,3 +82,16 @@ CSS Secrets book learning
 5.状态平滑的动画：animation不像transition,它在没有‘active’状态下硬切回开始状态，这节的解决方案（animation-play-state）我觉得不算太理想，不过还是可以适合一些动画效果,让动画暂停
 6.沿环形路径平移动画：这一节我的解决方案可能跟作者的有点不一样，之前是类似用到AE的一个空白对象（参考系）概念解决旋转问题，而这里除了空白对象旋转，还需要子元素反向旋转抵消
 
+--------------------------------------
+
+**经典语录 Quotations**
+
+- DRY: "Don’t Repeat Yourself."
+- WET: "We Enjoy Typing"
+- This is a book that eats its own dog food (佩服作者这是一本用html+css+js写出来的电子书)
+- Credit where it’s due (作者借鉴别人好的idea，都会致敬一下原创者，这是我真心佩服的，就像这句话一样)
+- It didn’t take long for everyone involved to realize that vendor prefixes were an epic failure.(嘲讽一下：CSS规范是由浏览器厂商制定的)
+- media query thresholds should not be dictated by specific devices
+
+
+ 

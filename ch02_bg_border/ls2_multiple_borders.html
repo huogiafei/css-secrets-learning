@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>multiple borders</title>
+    <title>multiple borders 多重边框</title>
     <link rel="stylesheet" href="../css/ls2.css">
 </head>
 <body>
+<!-- outline(不贴合圆角) -->
+<!-- box-shadow（第一层投影最顶，bg-image同理）-->
+<!-- border(唯一不影响布局的方案，算在内容区内) -->
+
+<!-- book demo:
+    play.csssecrets.io/extended-bg-position
+    play.csssecrets.io/background-origin
+    play.csssecrets.io/background-position-calc
+-->
+
 <div class="wrap">
     <div class="box box-1">box-shadow</div>
     <div class="box box-3">box-shadow:inset</div>
