@@ -179,6 +179,10 @@ li:first-child:nth-last-child(n+4) ~ li .color-code-2 {
     background-color: hsla(40, 70%, 50%, 1);
 }
 
+.num-2 li:first-child:nth-last-child(1){
+    border:1px solid yellowgreen;
+}
+
 .num-3 li:first-child:nth-last-child(n+2):nth-last-child(-n+4),
 .num-3 li:first-child:nth-last-child(n+2):nth-last-child(-n+4) ~ li{
     background-color: hsla(40, 70%, 50%, 1);

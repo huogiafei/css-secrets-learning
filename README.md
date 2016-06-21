@@ -56,7 +56,7 @@ CSS Secrets book learning
 
 **CH06 User Experience**
 
-1. 合适的鼠标光标（cursor）: help,not-allowed感觉可以经常用到，还有none这个比较好玩，除了可以整蛊别人之外，目前还没想到实际用途
+1. 合适的鼠标光标（cursor）: help,not-allowed感觉可以经常用到，还有none这个比较'好玩'
 2. 扩大可点击区域：移动开发优化，两种方案：1.border 2::before。第二种方案更好，不影响布局
 3. 自定义复选框：通过:check完全不再依赖js，而且最爽的是可以完全自定义样式，里面有个要注意的是需要content:'\a0'（不换行空格）做占位
 4. 弱化背景（阴影）：个人比较喜欢box-shadow方案，如果使用：before的话，当父层级出现背景的时候，遮罩层会被挡住
@@ -70,13 +70,13 @@ CSS Secrets book learning
 2.精确控制表格列宽：table-layout:fixed可以获得更灵活的table布局
 3.根据兄弟元素数量来设置样式：非常黑魔法的一节，通过first-child,nth-child和nth-last-child互相组合这个idea我非常佩服
 4.满幅背景，定宽内容：可以直接联想到footer(1200px宽度，满屏的灰色背景),一般是使用两层去控制，不过以后可以padding: 1em calc(100% - content-width)
-5.垂直居中：这个功能已经是CSS的笑柄了，自己写起来也非常不方便，反正我觉得充满hack的味道，目前个人觉得最好的解决方案是使用flexbox布局，这一点也是够讽刺的，难道其他布局不需要垂直居中
-6.置底的页脚：当页面内容太少的时候，footer就会‘浮’起来，解决有两种方法：1.calc(部分元素需要固定高度) 2.flexbox(使用flex:1让内容区自动拉伸)
+5.垂直居中：这个功能已经是CSS的笑柄了，自己写起来也非常不方便，反正我觉得充满hack的味道，目前个人觉得最好的解决方案是使用flexbox布局
+6.置底的页脚：当页面内容太少的时候，footer就会‘浮’起来，解决有两种方法：1.calc(部分元素需要固定高度) 2.flexbox(使用flex:1让内容区自动拉伸),我会偏向flexbox方案
 
 **CH08 Transitions & Animations**
 
 1.弹性效果：其实这一节除了了解cubic-bezier之外，还要通过不断调试曲线和时间点让动画效果看的逼真一点，或许还需要恶补一番动画的基本知识
-2.逐帧动画：其实有些动画需要硬切，step()这个被遗忘的参数恰好就适合逐帧动画
+2.逐帧动画：其实有些动画需要硬切(animation:step(n))
 3.闪烁效果：通过改变透明度实现闪烁效果，而且加上step可以实现硬切闪烁，例如光标
 4.打字动画：step + ch(长度单位),不过要注意的是:1.用js算出字符长度更好维护 2.字体差异需要letter-spacing去微调一下间隔位置
 5.状态平滑的动画：animation不像transition,它在没有‘active’状态下硬切回开始状态，这节的解决方案（animation-play-state）我觉得不算太理想，不过还是可以适合一些动画效果,让动画暂停
@@ -92,6 +92,26 @@ CSS Secrets book learning
 - Credit where it’s due (作者借鉴别人好的idea，都会致敬一下原创者，这是我真心佩服的，就像这句话一样)
 - It didn’t take long for everyone involved to realize that vendor prefixes were an epic failure.(嘲讽一下：CSS规范是由浏览器厂商制定的)
 - media query thresholds should not be dictated by specific devices
+
+**个人推荐**
+
+- ls5~7   通过background这个属性可以产生无数种背景图案，只要发挥一下想象力，里面有背景unit的分解，伪随机数，还有background各个属性的配合。
+- ls11    clip-path这个属性也是拥有无穷潜力的小宇宙，没时间解释，快上车:[in-pieces](http://species-in-pieces.com/)
+- ls14    简单饼图不简单，而且css和svg两种方案都非常有意思
+- ls17    这节用了三个挺有意思的解决方案：filter的组合，img+mix-blend-mode , bg+background-blend-mode,虽然不是经常用，但是出来的效果非常好
+- ls18    毛玻璃效果这个已经够吸引人了，Apple信仰的别错过
+- ls26    background去实现下划线可以有多种效果，例如波浪线，双下划线……
+- ls31    不用js的纯css方案，而且可以完全自定义checkbox和radio的样式，反正我自high了一下午
+- ls32-33 弹出模态窗口挺常见的，背景模糊虚化和背景加深，还有滚动锁定都可以用在这方面
+- ls34    background-attachment这个属性很好很强大
+- ls38    连first-child:nth-last-child(n+4）：nth-last-child(-n+8)这种写法都没看过，还不快点学
+- ls39    padding + calc这个逆向思维挺巧妙的
+- ls40    我知道'centering'有四种写法
+- ls45    animation:step()硬切效果
+
+**完结撒花**
+　　从一直关注大漠博客的更新，到看原书，将近一年的时间内给到我非常多的惊喜，我也一直抱着打游戏过关的心态把一个个小节的demo攻克下来。最后还是要谢谢Lea Verou,大漠，南北，彦子，和css魔法哥,
+让我接触并学到这么好玩的css secrets。
 
 
  
