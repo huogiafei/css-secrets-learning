@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Secrets Learning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://unpkg.com/vue@2.1.4/dist/vue.js"></script>
+</head>
+<body>
+<header>
+    <h1 class="title">Css Secrets Learning</h1>
+</header>
+<div id="app" class="app">
+    <ul class="tree-menu">
+        <tree-menu :tree="menuList"></tree-menu>
+    </ul>
+</div>
+
+
+<script type="text/x-template" id="treeMenuTemp">
+    <li>
+        <a :href="treeLink" target="_blank" @click="toggle">
+            <span v-if="isFolder" :class="['folder-fold',{'close':isClose}]">
+                <i class="material-icons">signal_cellular_4_bar</i>
+            </span>
+            <span v-if="tree.name">{{tree.name}}</span>
+            <span>{{tree.title}}</span>
+        </a>
+
+        <ul v-if="isFolder" v-show="!isClose" class="tree-menu">
+            <tree-menu v-for="tree of tree.items" :tree="tree"></tree-menu>
+        </ul>
+
+    </li>
+</script>
+<script src="main.js"></script>
+</body>
+</html>

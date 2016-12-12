@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Consolas,Lucida Console, monospace;
+}
+
+ul,li{
+    list-style: none;
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+header{
+    background-color: #34917a;
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 50px;
+}
+
+header .title{
+    margin: 0;
+}
+
+.app{
+    padding: 20px 0;
+    background-color: #f2f2f2;
+    height: 100vh;
+}
+
+.tree-menu{
+    font-size: 18px;
+    line-height: 35px;
+    color: #444;
+}
+
+.tree-menu li{
+    color: #333;
+}
+
+.tree-menu li li{
+    color: #666;
+}
+
+.tree-menu a[href$='.html']{
+    text-decoration: none;
+    color: #00a076;
+}
+
+.tree-menu .folder-fold{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    transition: transform .1s ease-in;
+    transform-origin: 50% 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tree-menu .folder-fold.close{
+    transform: rotate(-45deg);
+}
+
+.tree-menu .folder-fold i{
+    font-size: 14px;
+}
