@@ -49,6 +49,7 @@ body {
 .bar-2>span{
     display: inline-block;/*important*/
     transform: skewX(45deg);
+
 }
 
 .bar-3{

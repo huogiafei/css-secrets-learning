@@ -19,7 +19,7 @@ CSS Secrets book learning
 1. 半透明边框： background-clip
 2. 多重边框： outline + border + box-shadow
 3. 灵活的背景定位 ： background-position,background-origin,calc()
-4. 边框内圆角： outline + box-shadow（outline不跟圆角，box-shadow跟圆角）
+4. 边框内圆角： outline + box-shadow（outline不跟圆角，box-shadow跟圆角）,如果想要边框内外都是圆角的话，border-radisu需要用到em/rem单位
 5. 条纹背景：要点三个：1.通过渐变断点设置 2.45度的时候的条纹分解 3.repeating-linear-gradient
 6. 复杂的背景：这里找了几个典型例子，格子和波点,主要是把图案分解成可以repeat的unit，通过bg-position和bg-size去生成图案
 7. 伪随机背景：脑洞大开的一节，css可以通过质数生成随机效果，而这里通过多种颜色片的相互重叠(通过bg-size最小公倍数最大化)。
@@ -27,7 +27,7 @@ CSS Secrets book learning
 
 **CH03 Shapes**
 
-1. 自适应椭圆：border-radius的值，特别是加上`/`分割水平垂直半径，初始位置是右上角。
+1. 自适应椭圆：border-radius的值，特别是加上`/`分割水平垂直半径，初始位置是左上角。
 2. 平行四边形： :before + skew 
 3. 菱形图片： transform(rotate + scale)和clip-path,个人偏向clip-path，而transform给我感觉是牵一发动全身，clip-path方面介绍一个[工具](http://bennettfeely.com/clippy/)
 4. 切角效果：1.背景渐变拼接 2.svg + border-image 3.clip-path
