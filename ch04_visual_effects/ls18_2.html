@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ls18_2</title>
+    <style>
+        body,html{
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+        .wrap{
+            display: flex;
+            margin: auto;
+            width: 500px;
+            height: 300px;
+            background:url(../img/totoro.jpg) no-repeat center / cover;
+
+        }
+
+        .content{
+            margin: auto;
+            width: 400px;
+            height: 240px;
+            position: relative;
+        }
+
+        .content:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /*background:url(../img/totoro.jpg) no-repeat center / cover;*/
+            background: hsla(0,0%,100%,.5);
+            filter:blur(5px);
+            z-index: -1;
+        }
+        .text{
+            font-size:48px;
+            color: #444;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="content">
+        <p class="text">hello world</p>
+    </div>
+</div>
+</body>
+</html>
