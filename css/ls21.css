@@ -64,6 +64,7 @@ dd{
 .card-2 dt,
 .card-2 dd{
     display: inline;
+    
 }
 
 .card-2 dd:after{
