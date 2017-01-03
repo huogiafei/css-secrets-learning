@@ -91,7 +91,7 @@ body {
     border:1px solid #f66;
     width: 200px;
     height: 100px;
-    background: linear-gradient(45deg,transparent calc(50% - 1px),#f66 0,#f66 calc(50% + 1px),transparent 0),
+    background: linear-gradient(45deg,transparent calc(50% - 1px), #2e8364 0, #2e8364 calc(50% + 1px),transparent 0),
     linear-gradient(90deg,transparent calc(50% - 1px),#f66 0,#f66 calc(50% + 1px),transparent 0),
     linear-gradient(45deg,transparent calc(33.3% - 1px),#f66 0,#f66 calc(33.3% + 1px),transparent 0),linear-gradient(45deg,transparent calc(50% - 1px),#f66 0,#f66 calc(50% + 1px),transparent 0);
 }

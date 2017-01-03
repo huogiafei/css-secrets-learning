@@ -21,5 +21,12 @@
         <p class="box-desc">:before</p>
     </div>
 </div>
+<script>
+    var btns = document.querySelectorAll('.btn').forEach(function (item) {
+        item.addEventListener('click',function(){
+            console.log(item.innerHTML)
+        })
+    })
+</script>
 </body>
 </html>
